@@ -14,17 +14,32 @@
             <div class="contenedor">
                 <section>
                     <h3>Login</h3>
-                    <div class="contenedor_login">
-                        <div class="part cedula">
-                            <label for="txtCedula">Cédula: </label>
-                            <input  type="text" name="cedula" id="txtCedula" placeholder="Cédula..." maxlength="10" required>
+                    <form action="/login" method="post">
+                        <div class="contenedor_login">
+                            <div class="part cedula">
+                                <label for="txtCedula">Cédula: </label>
+                                <input  type="text" name="cedula" id="txtCedula" placeholder="Cédula..." maxlength="10" required>
+                            </div>
+                            
+                            <div class="part nombre">
+                                <label for="txtNombre">Nombre: </label>
+                                <input type="text" name="nombre" id="txtNombre" placeholder="Nombre..." required>
+                            </div>
+                            
+                            <div class="part password">
+                                <label for="txtPassword">Contraseña: </label>
+                                <input type="password" name="password" id="txtPassword" placeholder="Contraseña..." required>
+                            </div>
+                            
+                            <div class="part info_account">
+                                <p>No tienes una cuenta? <a href="#">Regístrate</a></p>
+                            </div>
+                            
+                            <div class="part boton">
+                                <button type="submit">Acceder</button>
+                            </div>
                         </div>
-
-                        <div class="part nombre">
-                            <label for="txtNombre">Nombre: </label>
-                        <input type="text" name="nombre" id="txtNombre" placeholder="Cédula..." maxlength="10" required>
-                        </div>
-                    </div>
+                    </form>
                 </section>
             </div>
         </main>
