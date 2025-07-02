@@ -7,24 +7,24 @@
         <meta name="keywords" content="HTML, CSS, JS, POSTGRESQL">
         <meta name="decription"
             content="Página principal donde se podrá ver las secciones de formularios">
-        <title>Sección de formularios | Admin</title>
+        <title>Login</title>
     </head>
     <body>
-        <header>
-            <div class="contenedor_navegacion">
-                <nav>
-                    <div class="contenedor_lista">
-                        <ul>
-                            <li>Inicio</li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
         <main>
             <div class="contenedor">
                 <section>
-                    <!-- <h3>Hola</h3> -->
+                    <h3>Login</h3>
+                    <div class="contenedor_login">
+                        <div class="part cedula">
+                            <label for="txtCedula">Cédula: </label>
+                            <input  type="text" name="cedula" id="txtCedula" placeholder="Cédula..." maxlength="10" required>
+                        </div>
+
+                        <div class="part nombre">
+                            <label for="txtNombre">Nombre: </label>
+                        <input type="text" name="nombre" id="txtNombre" placeholder="Cédula..." maxlength="10" required>
+                        </div>
+                    </div>
                 </section>
             </div>
         </main>
