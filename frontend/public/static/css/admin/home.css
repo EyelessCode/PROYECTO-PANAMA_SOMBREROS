@@ -21,29 +21,38 @@ body{
 }
 
 .contenedorHeader{
-    border: 3px solid;
+    outline: 2px solid;
     grid-column: span 4/span 4;
     grid-column-start: 2;
     grid-row-start: 1;
     padding: 50px;
+    margin: 5px;
+    box-shadow: 10px 10px black;
+
 }
 
 aside{
-    border: 3px solid;
+    outline: 2px solid;
     grid-row: span 5/span 5;
     grid-column-start: 1;
     grid-row-start: 1;
     padding: 50px;
+    background-color: rgb(150, 150, 0);
+    margin: 5px;
+    box-shadow: 10px 10px black;
 
 }
 
 .contenedorDashboard{
-    border: 3px solid;
+    outline: 2px solid;
     grid-column: span 4/span 4;
     grid-row: span 3/span 3;
     grid-column-start: 2;
     grid-row-start: 2;
     padding: 50px;
+    margin: 5px;
+    box-shadow: 10px 10px black;
+
 }
 
 footer{
@@ -52,7 +61,7 @@ footer{
     grid-row-start: 5;
     display: flex;
     flex-flow: column;
-    border: 2px solid;
+    outline: 2px solid;
     padding: 0 20px 20px;
     width: 100%;
     /* background: linear-gradient(to top, rgb(78, 125, 255),rgb(80, 24, 24)); */
@@ -60,6 +69,21 @@ footer{
     outline: 3px solid black;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
+    text-align: center;
+}
+
+footer .content_footer{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+footer .content_footer p>span{
+    font-style: italic;
+    color: red;
+    box-shadow: cyan;
 }
 
 footer:hover{
@@ -76,9 +100,20 @@ footer div{
     justify-content: center;
     align-items: center;
     color: white;
-    text-shadow: 3.5px 1.5px black;
     font-weight: bolder;
+}
 
+.logo, .content_footer{
+    text-shadow: 3.5px 1.5px black;
+}
+
+.footerPart2{
+    margin: 15px 0 0;
+}
+
+.footerPart2 p>span{
+    font-style: italic;
+    color: rgb(183, 0, 107);
 }
 
 .logo img{
