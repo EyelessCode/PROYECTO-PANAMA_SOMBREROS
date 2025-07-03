@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 10px;
+
+    width: 100vw;
+    height: 100dvh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(211, 211, 156);
+    /* background: linear-gradient(to bottom, rgb(158, 153, 129),rgb(58, 58, 126),
+        rgb(125, 57, 57)); */
+    /* background: linear-gradient(to bottom, #0b046a, #e03535, rgb(140, 72, 4)); */
+    font-size: 1.3em;
+}
+
+.contenedorHeader{
+    border: 3px solid;
+    grid-column: span 4/span 4;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    padding: 50px;
+}
+
+aside{
+    border: 3px solid;
+    grid-row: span 5/span 5;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding: 50px;
+
+}
+
+.contenedorDashboard{
+    border: 3px solid;
+    grid-column: span 4/span 4;
+    grid-row: span 3/span 3;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    padding: 50px;
+}
+
+footer{
+    grid-column: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 5;
+    display: flex;
+    flex-flow: column;
+    border: 2px solid;
+    padding: 0 20px 20px;
+    width: 100%;
+    /* background: linear-gradient(to top, rgb(78, 125, 255),rgb(80, 24, 24)); */
+    background-color: rgb(150, 150, 0);
+    outline: 3px solid black;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+footer:hover{
+    >div>img{
+        transform: rotate(-9deg);
+        transition: transform 0.1s ease-in;
+
+    }
+}
+
+footer div{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 3.5px 1.5px black;
+    font-weight: bolder;
+
+}
+
+.logo img{
+    width: 75px;
+    height: auto;
+    filter: drop-shadow(3px 3px 0 black);
+    /* transition: transform 0.1s ease-in-out; */
+}
