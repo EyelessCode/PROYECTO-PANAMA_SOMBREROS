@@ -133,6 +133,7 @@ h3{
     margin-left: 5px;
     font-size: 0.8em;
     border-style: none;
+    transition: all 0.1s ease-in-out;
 }
 
 .contenedor_login .part input::placeholder{
@@ -142,7 +143,7 @@ h3{
 .contenedor_login .part input:focus{
     border-style: none;
     outline: 3px solid black;
-
+    box-shadow: 6px 6px black;
 }
 
 .boton button{
@@ -210,6 +211,7 @@ footer div{
     /* transition: transform 0.1s ease-in-out; */
 }
 
+/*? TEST para móviles */
 @media (max-width: 768px) {
     .imagenn{
         /* position: absolute; */
