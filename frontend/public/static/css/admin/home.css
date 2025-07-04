@@ -37,6 +37,46 @@ body{
     align-items: center;
 }
 
+.contenedorHeader .hero-logo{
+    position: relative;
+}
+
+.contenedorHeader .hero-logo:hover{
+    /* transform: rotate(); */
+    >span{
+        animation: hatMove 0.7s infinite ease-in-out;
+        /* transition: animation 0.2s ease-in; */
+    }
+}
+
+@keyframes hatMove {
+    0%{
+        transform: rotate(-35deg);
+    }
+    50%{
+        transform: rotate(-50deg);
+    }
+    100%{
+        transform: rotate(-35deg);
+    }
+
+}
+
+.contenedorHeader .hero-logo h2{
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 4.5px 4.5px black;
+    font-size: 4em;
+    margin-left: 35px;
+}
+
+.contenedorHeader .hero-logo span{
+    position: absolute;
+    top: -20px;
+    left: 7.5px;
+    transform: rotate(-35deg);
+}
+
 .contenedorHeader .hero-logo img{
     width: 75px;
     height: 75px;
