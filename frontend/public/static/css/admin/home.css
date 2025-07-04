@@ -8,7 +8,7 @@ body{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(5,1fr);
-    gap: 10px;
+    gap: 7px;
 
     width: 100vw;
     height: 100dvh;
@@ -103,17 +103,27 @@ footer div{
     font-weight: bolder;
 }
 
-.logo, .content_footer{
+.logo, .top-content{
     text-shadow: 3.5px 1.5px black;
 }
 
-.footerPart2{
+.bottom-content{
     margin: 15px 0 0;
+    /* text-shadow: 3.5px 1.5px black; */
 }
 
-.footerPart2 p>span{
+.bottom-content p{
+    text-shadow: 3.5px 1.5px black;
+}
+
+.bottom-content p~span{
     font-style: italic;
     color: rgb(183, 0, 107);
+    cursor: pointer;
+}
+
+.bottom-content p~span:hover{
+    text-decoration: underline;
 }
 
 .logo img{
