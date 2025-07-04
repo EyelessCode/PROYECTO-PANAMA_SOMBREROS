@@ -6,22 +6,22 @@
         <meta name="author" content="EyelessCode">
         <meta name="keywords" content="HTML, CSS, JS, POSTGRESQL">
         <meta name="decription"
-            content="Página de acceso de credenciales">
-        <link rel="shortcut icon" href="../static/img/icon/icon-login.ico"
+            content="Página para registrarse">
+        <link rel="shortcut icon" href="../../static/img/icon/icon-register.ico"
             type="image/x-icon">
-        <link rel="stylesheet" href="../static/css/credentials.css"> <!--? Ruta Test -->
-        <title>Login</title>
+        <link rel="stylesheet" href="../../static/css/credentials.css"> <!--? Ruta Test -->
+        <title>Register | Panamá Sombreros</title>
     </head>
     <body>
         <main>
             <div class="contenedor">
                 <section>
                     <span class="imagenn">
-                        <img src="../static/img/logo-sombrero.webp"
+                        <img src="../../static/img/logo-sombrero.webp"
                             alt="sombrerito"> <!--? Ruta Test -->
                     </span>
-                    <h3>Login</h3>
-                    <form action="/login" method="post">
+                    <h3>Register</h3>
+                    <form action="/register" method="post">
                         <div class="contenedor_login">
                             <div class="part cedula">
                                 <label for="txtCedula">Cédula: </label>
@@ -36,6 +36,12 @@
                                     placeholder="Nombre..." required>
                             </div>
 
+                            <div class="part correo">
+                                <label for="txtEmail">Correo: </label>
+                                <input type="email" name="email" id="txtEmail"
+                                    placeholder="Correo..." required>
+                            </div>
+
                             <div class="part password">
                                 <label for="txtPassword">Contraseña: </label>
                                 <input type="password" name="password"
@@ -44,12 +50,12 @@
                             </div>
 
                             <div class="part registrarse">
-                                <p>No tienes una cuenta? </p> <a
-                                    href="#">Regístrate</a>
+                                <p>Ya tienes una cuenta? </p> <a href="#">Inicia
+                                    Sesión</a>
                             </div>
 
                             <div class="part boton">
-                                <button type="submit">Acceder</button>
+                                <button type="submit">Crear</button>
                             </div>
                         </div>
                     </form>
@@ -58,7 +64,7 @@
         </main>
         <footer>
             <div class="logo">
-                <img src="../static/img/logo-sombrero.webp" alt="logo">
+                <img src="../../static/img/logo-sombrero.webp" alt="logo">
                 <p>&copy; Panamá Sombreros</p>
             </div>
 

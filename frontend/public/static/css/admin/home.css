@@ -80,12 +80,6 @@ footer .content_footer{
     gap: 7px;
 }
 
-footer .content_footer p>span{
-    font-style: italic;
-    color: red;
-    box-shadow: cyan;
-}
-
 footer:hover{
     >div>img{
         transform: rotate(-9deg);
@@ -116,14 +110,17 @@ footer div{
     text-shadow: 3.5px 1.5px black;
 }
 
-.bottom-content p~span{
+.bottom-content p>span{
     font-style: italic;
     color: rgb(183, 0, 107);
     cursor: pointer;
+    text-shadow: none;
 }
 
-.bottom-content p~span:hover{
+.bottom-content p>span:hover{
     text-decoration: underline;
+    font-weight: bolder;
+
 }
 
 .logo img{
