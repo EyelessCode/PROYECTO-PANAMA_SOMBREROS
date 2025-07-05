@@ -118,9 +118,10 @@ body{
     flex-flow: row;
     justify-content: space-around;
     align-items: center;
-    width: 190px;
+    width: 100%;
     transition: box-shadow 0.1s ease-in-out;
     cursor: pointer;
+    gap: 5px;
 }
 
 .content-user .barra-user p{
@@ -179,7 +180,7 @@ aside{
 
 .contenedor-list li a{
     padding: 15px 35px;
-    outline: 2px solid white;
+    outline: 2px solid black;
     display: block;
     width: 190px;
     text-decoration: none;
@@ -210,10 +211,52 @@ aside{
     grid-row: span 3/span 3;
     grid-column-start: 2;
     grid-row-start: 2;
-    padding: 50px;
+    padding: 15px;
     margin: 5px 5px 10px;
     box-shadow: 10px 10px black;
     background-color: rgb(150, 150, 0);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 16px;
+}
+
+.contenedorDashboard div{
+    box-shadow: 10px 10px black;
+}
+
+.contenedorDashboard .board-histExporta{
+    grid-column: span 2/span 2;
+    grid-row: span 3/span 3;
+    outline: 2px solid black;
+}
+
+.contenedorDashboard .board-products-masVendidos{
+    grid-column: span 2 /span 2;
+    grid-row: span 3 /span 3;
+    grid-column-start: 3;
+    outline: 2px solid black;
+}
+
+.contenedorDashboard .board-clientes{
+    grid-row: span 5 /span 5;
+    grid-column-start: 5;
+    outline: 2px solid black;
+}
+
+.contenedorDashboard .board-tipoSombrero{
+    grid-column: span 2/span 2;
+    grid-row: span 2/span 2;
+    grid-row-start: 4;
+    outline: 2px solid black;
+}
+
+.contenedorDashboard .board-contenedores{
+    grid-column: span 2/span 2;
+    grid-row: span 2/span 2;
+    grid-column-start: 3;
+    grid-row-start: 4;
+    outline: 2px solid black;
 }
 
 footer{
