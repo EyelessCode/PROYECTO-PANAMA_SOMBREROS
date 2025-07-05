@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poetsen+One&family=Quattrocento:wght@400;700&family=Space+Grotesk:wght@300..700&family=Unbounded:wght@200..900&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -42,10 +44,8 @@ body{
 }
 
 .contenedorHeader .hero-logo:hover{
-    /* transform: rotate(); */
     >span{
         animation: hatMove 0.7s infinite ease-in-out;
-        /* transition: animation 0.2s ease-in; */
     }
 }
 
@@ -59,7 +59,6 @@ body{
     100%{
         transform: rotate(-35deg);
     }
-
 }
 
 .contenedorHeader .hero-logo h2{
@@ -105,6 +104,10 @@ body{
     filter: drop-shadow(5px 7.5px black);
 }
 
+.content-user .log-out img:active{
+    filter: drop-shadow(3px 5px black);
+}
+
 .content-user .barra-user{
     outline: 2px solid black;
     padding: 5px;
@@ -146,11 +149,59 @@ aside{
     grid-row: span 5/span 5;
     grid-column-start: 1;
     grid-row-start: 1;
-    padding: 50px;
+    padding: 15px 5px;
     background-color: rgb(150, 150, 0);
     margin: 5px;
     box-shadow: 10px 10px black;
 
+}
+
+.menu-opciones{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+
+}
+
+.contenedor-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    list-style: none;
+    margin: 10px;
+    text-align: center;
+}
+
+.contenedor-list li{
+    margin: 10px 0;
+}
+
+.contenedor-list li a{
+    padding: 15px 35px;
+    outline: 2px solid white;
+    display: block;
+    width: 190px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    background-color: rgb(211, 211, 156);
+    box-shadow: 7.5px 10px black;
+    transition: box-shadow 0.1s ease-in;
+}
+
+.contenedor-list li a:hover{
+    box-shadow: 10px 15px black;
+}
+
+.contenedor-list li a:active{
+    box-shadow: 7.5px 10px black;
+}
+
+.hero-menu h3{
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 1.5em;
 }
 
 .contenedorDashboard{
@@ -209,6 +260,10 @@ footer div{
 
 .logo, .top-content{
     text-shadow: 3.5px 1.5px black;
+}
+
+.logo p>span{
+    font-family: "Poetsen One", sans-serif;
 }
 
 .bottom-content{
