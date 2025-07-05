@@ -203,6 +203,8 @@ aside{
     text-align: center;
     font-family: "Poetsen One", sans-serif;
     font-size: 1.5em;
+    color: white;
+    text-shadow: 3.5px 1.5px black;
 }
 
 .contenedorDashboard{
@@ -225,10 +227,25 @@ aside{
     box-shadow: 10px 10px black;
 }
 
+.contenedorDashboard div .line{
+    width: 100%;
+    outline: 1px solid black;
+}
+
+.contenedorDashboard div h4{
+    text-transform: uppercase;
+    font-size: 0.65em;
+    font-weight: bolder;
+    /* margin: 5px 0 3.5px 15px; */
+    margin: 5px 0 3.5px 0;
+    text-align: center;
+}
+
 .contenedorDashboard .board-histExporta{
     grid-column: span 2/span 2;
     grid-row: span 3/span 3;
     outline: 2px solid black;
+    background-color: rgb(211, 211, 156);
 }
 
 .contenedorDashboard .board-products-masVendidos{
@@ -236,12 +253,14 @@ aside{
     grid-row: span 3 /span 3;
     grid-column-start: 3;
     outline: 2px solid black;
+    background-color: rgb(211, 211, 156);
 }
 
 .contenedorDashboard .board-clientes{
     grid-row: span 5 /span 5;
     grid-column-start: 5;
     outline: 2px solid black;
+    background-color: rgb(211, 211, 156);
 }
 
 .contenedorDashboard .board-tipoSombrero{
@@ -249,6 +268,7 @@ aside{
     grid-row: span 2/span 2;
     grid-row-start: 4;
     outline: 2px solid black;
+    background-color: rgb(211, 211, 156);
 }
 
 .contenedorDashboard .board-contenedores{
@@ -257,6 +277,7 @@ aside{
     grid-column-start: 3;
     grid-row-start: 4;
     outline: 2px solid black;
+    background-color: rgb(211, 211, 156);
 }
 
 footer{
