@@ -225,6 +225,39 @@ aside{
 
 .contenedorDashboard div{
     box-shadow: 10px 10px black;
+    position: relative;
+}
+
+.contenedorDashboard div:hover{
+    span{
+        animation: jumpIcon 0.3s ease-in-out;
+    }
+}
+
+@keyframes jumpIcon {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+
+    }
+    100%{
+        transform: translateY(0);
+
+    }
+
+}
+
+.contenedorDashboard div span img{
+    width: 37.8px;
+    height: auto;
+}
+
+.contenedorDashboard div span{
+    position: absolute;
+    top: -10px;
+    left: 0;
 }
 
 .contenedorDashboard div .line{
