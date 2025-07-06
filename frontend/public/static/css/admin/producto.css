@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedorHeader .hero-logo h2{
+    font-size: 3.5em;
+}
+
+.contenedorDashboard{
+    outline: 2px solid;
+    grid-column: span 4/span 4;
+    grid-row: span 3/span 3;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    padding: 15px;
+    margin: 5px 5px 10px;
+    box-shadow: 10px 10px black;
+    background-color: rgb(150, 150, 0);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 16px;
+}
+
+.boton-add-accion{
+    grid-column: span 5/span 5;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.boton-add-accion button{
+    padding: 7px 10px;
+    box-shadow: 4px 6px black;
+    border-style: none;
+    outline: 1px solid black;
+    background-color: rgb(211, 211, 156);
+    font-size: 0.8em;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    transition: box-shadow 0.1s ease-in-out;
+    font-weight: 500;
+}
+
+.boton-add-accion button:hover{
+    box-shadow: 6px 8px black;
+}
+
+.boton-add-accion button:active{
+    box-shadow: 4px 6px black;
+}
+
+.tabla{
+    outline: 2px solid black;
+    grid-column: span 5/span 5;
+    grid-row-start: 2;
+    grid-row: span 4/span 4;
+    background-color: rgb(211, 211, 156);
+    box-shadow: 6px 8px black;
+
+}
