@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poetsen+One&family=Quattrocento:wght@400;700&family=Space+Grotesk:wght@300..700&family=Unbounded:wght@200..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 7.5px;
+
+    width: 100vw;
+    height: 100dvh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(211, 211, 156);
+    /* background: linear-gradient(to bottom, rgb(158, 153, 129),rgb(58, 58, 126),
+        rgb(125, 57, 57)); */
+    /* background: linear-gradient(to bottom, #0b046a, #e03535, rgb(140, 72, 4)); */
+    font-size: 1.3em;
+    padding: 0 3.5px 0 0;
+
+}
+
+.contenedorHeader{
+    outline: 2px solid;
+    grid-column: span 4/span 4;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    /* padding: 50px; */
+    margin: 5px;
+    box-shadow: 10px 10px black;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: rgb(150, 150, 0);
+    align-items: center;
+}
+
+.contenedorHeader .hero-logo{
+    position: relative;
+}
+
+.contenedorHeader .hero-logo:hover{
+    >span{
+        animation: hatMove 0.7s infinite ease-in-out;
+    }
+}
+
+@keyframes hatMove {
+    0%{
+        transform: rotate(-35deg);
+    }
+    50%{
+        transform: rotate(-50deg);
+    }
+    100%{
+        transform: rotate(-35deg);
+    }
+}
+
+.contenedorHeader .hero-logo h2{
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 4.5px 4.5px black;
+    font-size: 4em;
+    margin-left: 35px;
+}
+
+.contenedorHeader .hero-logo span{
+    position: absolute;
+    top: -20px;
+    left: 7.5px;
+    transform: rotate(-35deg);
+}
+
+.contenedorHeader .hero-logo img{
+    width: 75px;
+    height: 75px;
+}
+
+.contenedorHeader .content-user{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.content-user .log-out{
+    /* testttt */
+    margin: 0 50px 0 0;
+}
+
+.content-user .log-out img{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    filter: drop-shadow(3px 5px black);
+    transition: filter 0.1s ease-in-out;
+}
+
+.content-user .log-out img:hover{
+    filter: drop-shadow(5px 7.5px black);
+}
+
+.content-user .log-out img:active{
+    filter: drop-shadow(3px 5px black);
+}
+
+.content-user .barra-user{
+    outline: 2px solid black;
+    padding: 5px;
+    margin: 0 35px 0 0;
+    box-shadow: 5px 10px black;
+    background-color: rgb(211, 211, 156);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    transition: box-shadow 0.1s ease-in-out;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.content-user .barra-user p{
+    color: black;
+    font-weight: bold;
+}
+
+.content-user .barra-user:hover{
+    box-shadow: 10px 15px black;
+}
+
+.content-user .barra-user img{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(150, 150, 0);
+    border-radius: 50px;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+aside{
+    outline: 2px solid;
+    grid-row: span 5/span 5;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding: 15px 5px;
+    background-color: rgb(150, 150, 0);
+    margin: 5px;
+    box-shadow: 10px 10px black;
+
+}
+
+.menu-opciones{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+
+}
+
+.contenedor-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    list-style: none;
+    margin: 10px;
+    text-align: center;
+}
+
+.contenedor-list li{
+    margin: 10px 0;
+}
+
+.contenedor-list li a{
+    padding: 15px 35px;
+    outline: 2px solid black;
+    display: block;
+    width: 190px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    background-color: rgb(211, 211, 156);
+    box-shadow: 7.5px 10px black;
+    transition: box-shadow 0.1s ease-in;
+}
+
+.contenedor-list li a:hover{
+    box-shadow: 10px 15px black;
+}
+
+.contenedor-list li a:active{
+    box-shadow: 7.5px 10px black;
+}
+
+.hero-menu h3{
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 3.5px 1.5px black;
+}
+
+footer{
+    grid-column: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 5;
+    display: flex;
+    flex-flow: column;
+    outline: 2px solid;
+    padding: 0 20px 5px;
+    width: 100%;
+    /* background: linear-gradient(to top, rgb(78, 125, 255),rgb(80, 24, 24)); */
+    background-color: rgb(150, 150, 0);
+    outline: 3px solid black;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    text-align: center;
+}
+
+footer .content_footer{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+footer:hover{
+    >div>img{
+        transform: rotate(-9deg);
+        transition: transform 0.1s ease-in;
+
+    }
+}
+
+footer div{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+}
+
+.logo, .top-content{
+    text-shadow: 3.5px 1.5px black;
+}
+
+.logo p>span{
+    font-family: "Poetsen One", sans-serif;
+}
+
+.bottom-content{
+    margin: 15px 0 0;
+    /* text-shadow: 3.5px 1.5px black; */
+}
+
+.bottom-content p{
+    text-shadow: 3.5px 1.5px black;
+}
+
+.bottom-content p>span{
+    font-style: italic;
+    color: rgb(183, 0, 107);
+    cursor: pointer;
+    text-shadow: none;
+}
+
+.bottom-content p>span:hover{
+    text-decoration: underline;
+    font-weight: bolder;
+
+}
+
+.logo img{
+    width: 75px;
+    height: auto;
+    filter: drop-shadow(3px 3px 0 black);
+    /* transition: transform 0.1s ease-in-out; */
+}
