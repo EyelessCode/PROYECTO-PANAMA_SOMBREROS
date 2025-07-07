@@ -8,7 +8,7 @@ new Chart(ctx, {
         labels: null,
         datasets: [{
             label: '# Cantidad vendidas del producto',
-            data: [19,35,46,5],
+            data:null,
             borderWidth: 2,
             borderColor:'black',
             borderRadius:15,
@@ -23,8 +23,8 @@ new Chart(ctx, {
     options: {
         scales: {
             y: {
-                beginAtZero: false,
-                stepSize:null,
+                beginAtZero: true,
+                stepSize:10,
                 // ticks:{
                 //     color:'black'
                 // }
