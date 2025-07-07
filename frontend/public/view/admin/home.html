@@ -11,6 +11,8 @@
             href="../../static/img/icon/icon-dashboard.ico" type="image/x-icon"> <!--? Ruta Test -->
         <link rel="stylesheet" href="../../static/css/admin/style.css"> <!--? Ruta Test -->
         <link rel="stylesheet" href="../../static/css/admin/home.css"> <!--? Ruta Test -->
+        <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script defer src="../../static/js/admin/home/util.js"></script> <!--? Ruta Test -->
         <title>Dashboard | Administración</title>
     </head>
     <body>
@@ -62,6 +64,23 @@
                 </span>
                 <h4>Historial Exportaciones</h4>
                 <div class="line"></div>
+                <div class="tabla-board tabla-expo">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código Contenedor</th>
+                                <th>País</th>
+                                <th>Fecha llegada</th>
+                                <th>Activo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--* dinámicoo -->
+                            <!--? ejemploo  -->
+                        </tbody>
+                        <!--? máixmo 8 filas (con encabezado) -->
+                    </table>
+                </div>
             </div>
 
             <div class="board-products-masVendidos">
@@ -71,7 +90,9 @@
                 </span>
                 <h4>Productos más vendidos</h4>
                 <div class="line"></div>
-
+                <div class="grafico-board contenedor-vendiGrafico">
+                    <canvas id="grafico-bar-vendidos"></canvas>
+                </div>
             </div>
 
             <div class="board-clientes">
@@ -81,7 +102,22 @@
                 </span>
                 <h4>Clientes</h4>
                 <div class="line"></div>
-
+                <div class="tabla-board tabla-clientes">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cédula</th>
+                                <th>Nombre</th>
+                                <th>Fecha ingreso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--* dinámicoo -->
+                            <!--? ejemploo  -->
+                        </tbody>
+                        <!--? máixmo 13 filas (con encabezado) -->
+                    </table>
+                </div>
             </div>
 
             <div class="board-tipoSombrero">

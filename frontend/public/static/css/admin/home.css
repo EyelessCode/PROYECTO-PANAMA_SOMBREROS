@@ -21,7 +21,7 @@
 }
 
 .contenedorDashboard div{
-    box-shadow: 10px 10px black;
+    /* box-shadow: 10px 10px black; */
     position: relative;
 }
 
@@ -76,6 +76,40 @@
     grid-row: span 3/span 3;
     outline: 2px solid black;
     background-color: rgb(211, 211, 156);
+    box-shadow: 10px 10px black;
+
+}
+
+.board-histExporta .tabla-expo{
+    font-size: 0.7em;
+    
+}
+
+.board-histExporta .tabla-expo table{
+    margin-top: 3.5px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabla-expo table thead tr th{
+    background-color: rgb(150, 150, 0);
+    padding: 6px 24px;
+}
+
+.tabla-expo table thead tr th,
+.tabla-expo table tbody tr td{
+    text-align: center;
+    padding: 4.1px 24px;
+    outline: 0.2px solid black;
+}
+
+.tabla-expo table tbody tr td{
+    font-size: 0.7em;
+}
+
+.tabla-expo table tbody tr:nth-child(even){
+    background-color: rgb(165, 165, 121);
+    font-weight: bolder;
 }
 
 .contenedorDashboard .board-products-masVendidos{
@@ -84,6 +118,22 @@
     grid-column-start: 3;
     outline: 2px solid black;
     background-color: rgb(211, 211, 156);
+    box-shadow: 10px 10px black;
+}
+
+.board-products-masVendidos .grafico-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    margin: 10px auto 0;
+    box-shadow: 7px 10px black;
+}
+
+.grafico-board #grafico-bar-vendidos{
+    /* height: auto; */
+    background-color: rgb(150, 150, 0);
+
 }
 
 .contenedorDashboard .board-clientes{
@@ -91,6 +141,43 @@
     grid-column-start: 5;
     outline: 2px solid black;
     background-color: rgb(211, 211, 156);
+    box-shadow: 10px 10px black;
+
+}
+
+.board-clientes .tabla-clientes{
+    font-size: 0.7em;
+    
+}
+
+.board-clientes .tabla-clientes table{
+    margin-top: 3.5px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabla-clientes table thead tr th,
+.tabla-clientes table tbody tr td{
+    padding: 6px 25px;
+    outline: 0.2px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.tabla-clientes table thead tr th{
+    background-color: rgb(150, 150, 0);
+
+
+}
+
+.tabla-clientes table tbody tr td{
+    font-size: 0.7em;
+    
+}
+
+.tabla-clientes table tbody tr:nth-child(even){
+    background-color: rgb(165, 165, 121);
+    font-weight: bolder;
 }
 
 .contenedorDashboard .board-tipoSombrero{
@@ -99,6 +186,8 @@
     grid-row-start: 4;
     outline: 2px solid black;
     background-color: rgb(211, 211, 156);
+    box-shadow: 10px 10px black;
+
 }
 
 .contenedorDashboard .board-contenedores{
@@ -108,4 +197,6 @@
     grid-row-start: 4;
     outline: 2px solid black;
     background-color: rgb(211, 211, 156);
+    box-shadow: 10px 10px black;
+
 }
