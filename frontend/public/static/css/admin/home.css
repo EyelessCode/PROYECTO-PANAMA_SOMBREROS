@@ -190,6 +190,41 @@
 
 }
 
+.board-tipoSombrero .tabla-tipoSombrero{
+    font-size: 0.7em;
+    
+}
+
+.board-tipoSombrero .tabla-tipoSombrero table{
+    margin-top: 3.5px;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+.tabla-tipoSombrero table thead tr th,
+.tabla-tipoSombrero table tbody tr td{
+    text-align: center;
+    padding: 3.5px 24px;
+    outline: 0.2px solid black;
+}
+
+.tabla-tipoSombrero table thead tr th{
+    background-color: rgb(150, 150, 0);
+    padding: 2px auto;
+    font-size: 0.8em;
+    width: 100%;
+}
+
+.tabla-tipoSombrero table tbody tr td{
+    font-size: 0.7em;
+}
+
+.tabla-tipoSombrero table tbody tr:nth-child(even){
+    background-color: rgb(165, 165, 121);
+    font-weight: bolder;
+}
+
 .contenedorDashboard .board-contenedores{
     grid-column: span 2/span 2;
     grid-row: span 2/span 2;
@@ -199,4 +234,39 @@
     background-color: rgb(211, 211, 156);
     box-shadow: 10px 10px black;
 
+}
+
+.board-contenedores .tabla-contenedores{
+    font-size: 0.7em;
+    
+}
+
+.board-contenedores .tabla-contenedores table{
+    margin-top: 3.5px;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+.tabla-contenedores table thead tr th,
+.tabla-contenedores table tbody tr td{
+    text-align: center;
+    padding: 3.5px 24px;
+    outline: 0.2px solid black;
+}
+
+.tabla-contenedores table thead tr th{
+    background-color: rgb(150, 150, 0);
+    padding: 2px auto;
+    font-size: 0.8em;
+    width: 100%;
+}
+
+.tabla-contenedores table tbody tr td{
+    font-size: 0.7em;
+}
+
+.tabla-contenedores table tbody tr:nth-child(even){
+    background-color: rgb(165, 165, 121);
+    font-weight: bolder;
 }
