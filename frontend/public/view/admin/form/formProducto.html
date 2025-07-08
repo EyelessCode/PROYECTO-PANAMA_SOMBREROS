@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="EyelessCode">
+        <meta name="description"
+            content="Dashboard, donde el Admin puede monitorear herramientas">
+        <meta name="keywords" content="HTML, CSS, JS, POSTGRESQL">
+        <link rel="shortcut icon" href="../../../static/img/icon/producto-icon.ico" type="image/x-icon"> <!--? Ruta Test -->
+        <link rel="stylesheet" href="../../../static/css/admin/style.css"> <!--? Ruta Test -->
+        <link rel="stylesheet" href="../../../static/css/admin/form.css"> <!--? Ruta Test -->
+        <title>Formulario Producto | Administración</title>
+    </head>
+    <body>
+        <header class="contenedorHeader">
+            <div class="hero-logo">
+                <span class="imagenn">
+                    <img src="../../../static/img/logo-sombrero.webp"
+                            alt="sombrerito"> <!--? Ruta Test -->
+                </span>
+                <h2 class="titulo-producto">Agregar un nuevo producto</h2>
+            </div>
+
+            <div class="content-user">
+                <div class="barra-user">
+                    <img src="../../../static/img/perfil-logo.webp" alt="perfil">
+                    <!-- <p>FernándezFernándezFernández 15</p> -->
+                    <!--* lo de arriba es dinámico -->
+                    <!--* Dinámico -->
+                </div>
+    
+                <div class="log-out">
+                    <img src="../../../static/img/log-out-icon.webp" alt="">
+                </div>
+            </div>
+        </header>
+
+        <aside>
+            <div class="hero-menu">
+                <h3>Panamá</h3><h3>Sombreros</h3>
+            </div>
+
+            <div class="menu-opciones">
+                <ul class="contenedor-list">
+                    <li><a href="./home.html">Inicio</a></li> <!--? ruta testt-->
+                    <li><a href="#">Gestión Productos</a></li>
+                    <li><a href="#">Gestión Clientes</a></li>
+                    <li><a href="#">Contenedores</a></li>
+                    <li><a href="#">Consultas Admin</a></li>
+                    <li><a href="#">Detalles Exportación</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="contenedorDashboard wrapper-form">
+            <section class="wrapper">
+                <h3>Formulario</h3>
+                <form action="/producto" method="post">
+                    <div class="contenedor-form-producto">
+                        <div class="part tipoSombrero">
+                            <label for="txtTipoSomb">Tipo de Sombrero: </label>
+                            <input type="text" name="tipoSombrero" id="txtTipoSomb"
+                                placeholder="Tipo..." maxlength="25"
+                                required>
+                        </div>
+
+                        <div class="part talla">
+                            <label for="cmbTalla">Talla: </label>
+                            <select name="talla" id="cmbTalla">
+                                <!--? dinámico -->
+                                <option selected value="0"> -- Seleccionar -- </option>
+                            </select>
+                        </div>
+
+                        <div class="part color">
+                            <label for="cmbColor">Color: </label>
+                            <select name="color" id="cmbColor">
+                                <!--? dinámico -->
+                                <option selected value="0"> -- | -- </option>
+                            </select>
+                            <div class="ejemploColor"></div>
+                        </div>
+
+                        <div class="part precio">
+                            <label for="txtPrecio">Precio: </label>
+                            <input type="text" name="precio" id="txtPrecio"
+                                placeholder="Precio..." required>
+                        </div>
+
+                        <div class="part boton">
+                            <button type="submit">Agregar nuevo</button>
+                            <button type="button">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="logo">
+                <img src="../../../static/img/logo-sombrero.webp" alt="logo">
+                <p>&copy; <span>Panamá Sombreros</span></p>
+            </div>
+
+            <div class="content_footer top-content">
+                <p>Distribuímos la mejor gestión para los productos. Nosotros no fallamos.</p>
+            </div>
+
+            <div class="content_footer bottom-content">
+                <p>Si hay algún problema técnico, contacte con <span>cristelMolineros@gmail.com</span>.</p>
+            </div>
+        </footer>
+    </body>
+</html>
