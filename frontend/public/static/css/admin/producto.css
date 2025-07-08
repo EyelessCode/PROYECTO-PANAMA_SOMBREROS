@@ -83,6 +83,13 @@
     font-size: 0.5em;
 }
 
+.contenedor-tabla tbody tr td:nth-child(4){
+    max-width: 15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .contenedor-tabla tbody tr:nth-child(even){
     background-color: rgb(165, 165, 121);
     font-weight: bolder;
@@ -92,6 +99,8 @@
 .contenedor-tabla tbody tr td{
     border-style: none;
     outline: 2px solid black;
+    padding: 0 7.5px;
+
 }
 
 
@@ -140,4 +149,30 @@
 .tabla-producto .nextOrBack .btnBack span img:active,
 .tabla-producto .nextOrBack .btnNext span img:active{
     filter: drop-shadow(3.5px 5px black);
+}
+
+.contenedor-tabla .btnAccion{
+    padding: 0;
+    background-color: transparent;
+    border-style: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.contenedor-tabla .btnDelete:active{
+    span>img{
+        filter: drop-shadow(0.5px 0.5px darkred);
+    }
+}
+
+.contenedor-tabla .btnEdit:active{
+    span>img{
+        filter: drop-shadow(0.5px 0.5px darkcyan);
+    }
+}
+
+.contenedor-tabla .btnAccion span img{
+    width: 23.5px;
+    height: auto;
+    mix-blend-mode: multiply;
 }
