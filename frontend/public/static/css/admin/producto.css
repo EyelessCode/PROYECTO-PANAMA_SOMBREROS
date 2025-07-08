@@ -20,7 +20,7 @@
     background-color: rgb(150, 150, 0);
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(4,1fr)25px;
     gap: 16px;
 }
 
@@ -56,8 +56,88 @@
     outline: 2px solid black;
     grid-column: span 5/span 5;
     grid-row-start: 2;
-    grid-row: span 4/span 4;
+    grid-row: span 3/span 3;
     background-color: rgb(211, 211, 156);
     box-shadow: 6px 8px black;
 
+}
+
+.tabla .contenedor-tabla{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.contenedor-tabla thead tr th{
+    background-color:black;
+    color: white;
+}
+
+.contenedor-tabla tbody tr td{
+    font-size: 0.7em;
+}
+
+.contenedor-tabla tbody tr td:nth-child(4),
+.contenedor-tabla tbody tr td:nth-child(1){
+    font-size: 0.5em;
+}
+
+.contenedor-tabla tbody tr:nth-child(even){
+    background-color: rgb(165, 165, 121);
+    font-weight: bolder;
+}
+
+.contenedor-tabla thead tr th,
+.contenedor-tabla tbody tr td{
+    border-style: none;
+    outline: 2px solid black;
+}
+
+
+/*  */
+.tabla-producto .nextOrBack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* outline: 1px solid; */
+    grid-column: span 5/span 5;
+    grid-row-start: 5;
+}
+
+.tabla-producto .nextOrBack .page{
+    font-size: 1.2rem;
+    margin: 0 6px;
+    outline: 0.5px dashed black;
+    padding: 0 6px;
+    text-align: center;
+}
+
+.tabla-producto .nextOrBack .btnBack,
+.tabla-producto .nextOrBack .btnNext{
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+}
+
+.tabla-producto .nextOrBack .btnBack span img{
+    transform: rotate(180deg);
+}
+
+.tabla-producto .nextOrBack .btnBack span img,
+.tabla-producto .nextOrBack .btnNext span img{
+    width: 30px;
+    height: auto;
+    filter: drop-shadow(3.5px 5px black);
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.tabla-producto .nextOrBack .btnBack span img:hover,
+.tabla-producto .nextOrBack .btnNext span img:hover{
+    filter: drop-shadow(5px 7px black);
+}
+
+.tabla-producto .nextOrBack .btnBack span img:active,
+.tabla-producto .nextOrBack .btnNext span img:active{
+    filter: drop-shadow(3.5px 5px black);
 }
