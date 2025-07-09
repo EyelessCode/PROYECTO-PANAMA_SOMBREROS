@@ -120,13 +120,13 @@ if (tipo==='addProducto') {
                     <div class="part info">
                         <label for="lbCedula">Cédula: </label>
                         <!--*  diámico -->
-                        <span>0943791061</span>
+                        <span id="cedula_usuario"></span>
                     </div>
 
                     <div class="part nombre">
                         <label for="lbNombre">Nombre: </label>
                         <!--*  diámico -->
-                        <span>Cristhian Guedes</span>
+                        <span id="nombre_usuario"></span>
                     </div>
 
                     <div class="part categoria">
@@ -155,6 +155,9 @@ if (tipo==='addProducto') {
 }else{
     section.innerHTML=
         `
-            <h2>A dónde vas...?</h2>
+            <div class="notFound">
+                <h2>A dónde vas...?</h2>
+                <p>No deberías estar aquí, RETÍRATE!</p>
+            </div>
         `
 }

@@ -229,3 +229,8 @@ form .contenedor-form-generico div{
 .contenedor-form-generico .boton .btnDinamicoEdit{
     background-color: darkblue;
 }
+
+/*?  NO ENCONTRADO */
+.notFound h2,p{
+    margin: 10px;
+}
