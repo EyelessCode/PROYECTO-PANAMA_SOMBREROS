@@ -31,7 +31,10 @@
                 </div>
     
                 <div class="log-out">
-                    <img src="../../../static/img/log-out-icon.webp" alt="">
+                    <!--? Ruta Test -->
+                    <button onclick="window.location.href='../../client/login.html'">
+                        <img src="../../../static/img/log-out-icon.webp" alt="cerrar sesión">
+                    </button>
                 </div>
             </div>
         </header>
@@ -43,8 +46,8 @@
 
             <div class="menu-opciones">
                 <ul class="contenedor-list">
-                    <li><a href="./home.html">Inicio</a></li> <!--? ruta testt-->
-                    <li><a href="#">Gestión Productos</a></li>
+                    <li><a href="../home.html">Inicio</a></li> <!--? ruta testt-->
+                    <li><a href="../productos.html">Gestión Productos</a></li> <!--? ruta testt-->
                     <li><a href="#">Gestión Clientes</a></li>
                     <li><a href="#">Contenedores</a></li>
                     <li><a href="#">Consultas Admin</a></li>
@@ -90,7 +93,8 @@
 
                         <div class="part boton">
                             <button type="submit">Agregar nuevo</button>
-                            <button type="button">Cancelar</button>
+                            <button type="button" onclick="window.location.href='../productos.html'">Cancelar</button>
+                        <!--? Ruta Test -->
                         </div>
                     </div>
                 </form>

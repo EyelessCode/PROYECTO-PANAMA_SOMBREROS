@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body .tabla-cliente .buscar-accion{
+    grid-column: span 5/span 5;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tabla-cliente .buscar-accion input{
+    padding: 7.5px;
+    font-size: 0.75em;
+    border-style: none;
+    transition: all 0.1s ease-in-out;
+    border-radius: 10px;
+}
+
+.tabla-cliente .buscar-accion input::placeholder{
+    color: gray;
+}
+
+.tabla-cliente .buscar-accion input:focus{
+    border-style: none;
+    outline: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+
+/*  */
+.tabla-cliente .buscar-accion button{
+    background-color: transparent;
+    border-style: none;
+    margin-right: 20px;
+}
+
+.tabla-cliente .buscar-accion{
+    /* testttt */
+    margin-right: 5px;
+
+}
+
+.tabla-cliente .buscar-accion img{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    filter: drop-shadow(3px 5px black);
+    transition: filter 0.1s ease-in-out;
+}
+
+.tabla-cliente .buscar-accion img:hover{
+    filter: drop-shadow(5px 7.5px black);
+}
+
+.tabla-cliente .buscar-accion img:active{
+    filter: drop-shadow(3px 5px black);
+}
+
+.tabla-cliente .nextOrBack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* outline: 1px solid; */
+    grid-column: span 5/span 5;
+    grid-row-start: 5;
+}
+
+.tabla-cliente .nextOrBack .page{
+    font-size: 1.2rem;
+    margin: 0 6px;
+    outline: 0.5px dashed black;
+    padding: 0 6px;
+    text-align: center;
+}
+
+.tabla-cliente .nextOrBack .btnBack,
+.tabla-cliente .nextOrBack .btnNext{
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+}
+
+.tabla-cliente .nextOrBack .btnBack span img{
+    transform: rotate(180deg);
+}
+
+.tabla-cliente .nextOrBack .btnBack span img,
+.tabla-cliente .nextOrBack .btnNext span img{
+    width: 30px;
+    height: auto;
+    filter: drop-shadow(3.5px 5px black);
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.tabla-cliente .nextOrBack .btnBack span img:hover,
+.tabla-cliente .nextOrBack .btnNext span img:hover{
+    filter: drop-shadow(5px 7px black);
+}
+
+.tabla-cliente .nextOrBack .btnBack span img:active,
+.tabla-cliente .nextOrBack .btnNext span img:active{
+    filter: drop-shadow(3.5px 5px black);
+}

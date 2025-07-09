@@ -87,6 +87,11 @@ body{
     align-items: center;
 }
 
+.contenedorHeader .log-out button{
+    background-color: transparent;
+    border-style: none;
+}
+
 .content-user .log-out{
     /* testttt */
     margin: 0 50px 0 0;
@@ -280,4 +285,78 @@ footer div{
     height: auto;
     filter: drop-shadow(3px 3px 0 black);
     /* transition: transform 0.1s ease-in-out; */
+}
+
+.contenedor-tabla .btnAccion{
+    padding: 0;
+    background-color: transparent;
+    border-style: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.contenedor-tabla .btnAccion span img{
+    width: 23.5px;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+/** cliente  */
+.contenedorHeader .hero-logo h2{
+    font-size: 3.5em;
+}
+
+.contenedorDashboard{
+    outline: 2px solid;
+    grid-column: span 4/span 4;
+    grid-row: span 3/span 3;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    padding: 15px;
+    margin: 5px 5px 10px;
+    box-shadow: 10px 10px black;
+    background-color: rgb(150, 150, 0);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4,1fr)25px;
+    gap: 16px;
+}
+
+.tabla{
+    outline: 2px solid black;
+    grid-column: span 5/span 5;
+    grid-row-start: 2;
+    grid-row: span 3/span 3;
+    background-color: rgb(211, 211, 156);
+    box-shadow: 6px 8px black;
+
+}
+
+.tabla .contenedor-tabla{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.contenedor-tabla thead tr th{
+    background-color:black;
+    color: white;
+    outline: 1.5px solid rgb(211, 211, 156);
+}
+
+.contenedor-tabla tbody tr td{
+    font-size: 0.7em;
+    outline: 2px solid black;
+}
+
+.contenedor-tabla tbody tr:nth-child(even){
+    background-color: rgb(165, 165, 121);
+    font-weight: bolder;
+}
+
+.contenedor-tabla thead tr th,
+.contenedor-tabla tbody tr td{
+    border-style: none;
+    padding: 8.2px;
+
 }
