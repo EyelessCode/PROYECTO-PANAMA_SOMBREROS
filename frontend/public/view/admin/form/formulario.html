@@ -10,6 +10,7 @@
         <link rel="shortcut icon" href="../../../static/img/icon/producto-icon.ico" type="image/x-icon"> <!--? Ruta Test -->
         <link rel="stylesheet" href="../../../static/css/admin/style.css"> <!--? Ruta Test -->
         <link rel="stylesheet" href="../../../static/css/admin/form.css"> <!--? Ruta Test -->
+        <script defer src="../../../static/js/admin/producto/util.js"></script> <!--? Ruta Test -->
         <title>Formulario Producto | Administración</title>
     </head>
     <body>
@@ -19,7 +20,8 @@
                     <img src="../../../static/img/logo-sombrero.webp"
                             alt="sombrerito"> <!--? Ruta Test -->
                 </span>
-                <h2 class="titulo-producto">Agregar un nuevo producto</h2>
+                <!--* din+amicooo t´tulo dinámico  -->
+                <h2 id="h2Titulo">------ un ----- producto</h2>
             </div>
 
             <div class="content-user">
@@ -57,47 +59,8 @@
         </aside>
 
         <main class="contenedorDashboard wrapper-form">
-            <section class="wrapper">
-                <h3>Formulario</h3>
-                <form action="/producto" method="post">
-                    <div class="contenedor-form-producto">
-                        <div class="part tipoSombrero">
-                            <label for="txtTipoSomb">Tipo de Sombrero: </label>
-                            <input type="text" name="tipoSombrero" id="txtTipoSomb"
-                                placeholder="Tipo..." maxlength="25"
-                                required>
-                        </div>
-
-                        <div class="part talla">
-                            <label for="cmbTalla">Talla: </label>
-                            <select name="talla" id="cmbTalla">
-                                <!--? dinámico -->
-                                <option selected value="0"> -- Seleccionar -- </option>
-                            </select>
-                        </div>
-
-                        <div class="part color">
-                            <label for="cmbColor">Color: </label>
-                            <select name="color" id="cmbColor">
-                                <!--? dinámico -->
-                                <option selected value="0"> -- | -- </option>
-                            </select>
-                            <div class="ejemploColor"></div>
-                        </div>
-
-                        <div class="part precio">
-                            <label for="txtPrecio">Precio: </label>
-                            <input type="text" name="precio" id="txtPrecio"
-                                placeholder="Precio..." required>
-                        </div>
-
-                        <div class="part boton">
-                            <button type="submit">Agregar nuevo</button>
-                            <button type="button" onclick="window.location.href='../productos.html'">Cancelar</button>
-                        <!--? Ruta Test -->
-                        </div>
-                    </div>
-                </form>
+            <section class="wrapper" id="wrapperFormulario">
+                <!--* dinámico  -->
             </section>
         </main>
 

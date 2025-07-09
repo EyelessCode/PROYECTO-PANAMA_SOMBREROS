@@ -19,7 +19,7 @@
                     <img src="../../static/img/logo-sombrero.webp"
                             alt="sombrerito"> <!--? Ruta Test -->
                 </span>
-                <h2 class="titulo-producto">Gestión Productos</h2>
+                <h2 id="h2Titulo">Gestión Productos</h2>
             </div>
 
             <div class="content-user">
@@ -59,7 +59,7 @@
         <main class="contenedorDashboard tabla-producto">
             <div class="boton-add-accion">
                 <!--? ruta testt-->
-                <button type="button" onclick="window.location.href='./form/formProducto.html'">Agregar nuevo</button>
+                <button id="btnFormProducto" type="button" onclick="window.location.href='./form/formulario.html?type=addProducto'">Agregar nuevo</button>
             </div>
             <div class="tabla">
                 <table class="contenedor-tabla">
@@ -82,12 +82,12 @@
                         <span>
                             <img src="../../static/img/icon/delete-icon.webp" alt="borrar">
                         </span>
-                    </button>
-                    <button type="button" class="btnAccion btnEdit">
+                    </button> -->
+                    <button type="button" class="btnAccion btnEdit" onclick="window.location.href='./form/formulario.html?type=editProducto'">
                         <span>
                             <img src="../../static/img/icon/edit-icon.webp" alt="editar">
                         </span>
-                    </button> -->
+                    </button>
                 </table>
             </div>
             <div class="nextOrBack">

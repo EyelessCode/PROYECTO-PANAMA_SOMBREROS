@@ -67,22 +67,22 @@ body .wrapper-form .wrapper{
     width: 100%;
 }
 
-.wrapper form .contenedor-form-producto{
+.wrapper form .contenedor-form-generico{
     display: flex;
     flex-flow: column;
 }
 
-form .contenedor-form-producto div label{
+form .contenedor-form-generico div label{
     font-size: 0.8em;
     font-weight: bolder;
     margin: 5px 10px 5px 0;
 }
 
-/* form .contenedor-form-producto div:nth-child(1) label{
+/* form .contenedor-form-generico div:nth-child(1) label{
     font-size: 0.8em;
 } */
 
-form .contenedor-form-producto div input{
+form .contenedor-form-generico div input{
     padding: 7.5px;
     font-size: 0.75em;
     border-style: none;
@@ -90,11 +90,11 @@ form .contenedor-form-producto div input{
     border-radius: 10px;
 }
 
-form .contenedor-form-producto div:nth-child(1) input{
+form .contenedor-form-generico div:nth-child(1) input{
     padding: 5px 50px 5px 7.5px;
 }
 
-form .contenedor-form-producto div select{
+form .contenedor-form-generico div select{
     padding: 7.5px;
     font-style: italic;
     border-radius: 10px;
@@ -104,13 +104,13 @@ form .contenedor-form-producto div select{
     text-align: center;
 }
 
-form .contenedor-form-producto div select:focus{
+form .contenedor-form-generico div select:focus{
     outline: 2px solid black;
     box-shadow: 6px 6px black;
 }
 
 
-form .contenedor-form-producto div{
+form .contenedor-form-generico div{
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -118,17 +118,17 @@ form .contenedor-form-producto div{
     margin: 7.5px;
 }
 
-/* .contenedor-form-producto .part input{
+/* .contenedor-form-generico .part input{
     padding: 7.5px 10px;
     border-radius: 10px;
 
 } */
 
-.contenedor-form-producto .part input::placeholder{
+.contenedor-form-generico .part input::placeholder{
     color: gray;
 }
 
-.contenedor-form-producto .part input:focus{
+.contenedor-form-generico .part input:focus{
     border-style: none;
     outline: 3px solid black;
     box-shadow: 6px 6px black;
@@ -182,4 +182,50 @@ form .contenedor-form-producto div{
 .boton button:nth-child(2){
     background-color: darkred;
     color: white;
+}
+
+/*? consulta */
+.contenedor-form-generico .consultaDescripcion textarea{
+    padding: 5px 30px 30px 5px;
+    font-size: 0.75em;
+    border-style: none;
+    transition: all 0.1s ease-in-out;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.contenedor-form-generico .consultaDescripcion textarea::placeholder{
+    color: gray;
+}
+
+.contenedor-form-generico .consultaDescripcion textarea:focus{
+    border-style: none;
+    outline: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+
+.contenedor-form-generico .categoria button{
+    margin: 10px;
+    padding: 7.5px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: darkgreen;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 2.5px 3px black;
+}
+
+.contenedor-form-generico .categoria button:hover{
+    box-shadow: 3px 4.5px black;
+}
+
+.contenedor-form-generico .categoria button:active{
+    box-shadow: 2.5px 3px black;
+}
+
+
+/*? cuando modificas un producto */
+.contenedor-form-generico .boton .btnDinamicoEdit{
+    background-color: darkblue;
 }
