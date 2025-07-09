@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
-.hero-logo h2{
-    font-size: 2em;
+.contenedorHeader .hero-logo span{
+    top: -20.5px;
+    left: 9px;
+    /* transform: rotate(-35deg); */
+}
+
+.contenedorHeader .hero-logo h2{
+    font-size: 4em;
 }
 
 body .tabla-cliente .buscar-accion{

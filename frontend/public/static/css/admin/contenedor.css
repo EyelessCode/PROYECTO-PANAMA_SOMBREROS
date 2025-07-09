@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+.contenedorHeader .hero-logo span{
+    top: -25px;
+    left: 7.5px;
+    /* transform: rotate(-35deg); */
+}
+
+.contenedorHeader .hero-logo h2{
+    font-size: 3.25em;
+}
+
 body .tabla-contenedor .buscar-accion{
     grid-column: span 5/span 5;
     display: inline-flex;
