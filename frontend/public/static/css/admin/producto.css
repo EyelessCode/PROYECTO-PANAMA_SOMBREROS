@@ -10,6 +10,15 @@
     font-size: 0.5em;
 }
 
+.contenedor-tabla thead tr th:nth-child(1){
+    min-width: 95px;
+}
+
+.contenedor-tabla thead tr th:nth-child(6),
+.contenedor-tabla thead tr th:nth-child(3){
+    max-width: 45px;
+}
+
 .contenedor-tabla tbody tr td:nth-child(4){
     max-width: 15rem;
     white-space: nowrap;

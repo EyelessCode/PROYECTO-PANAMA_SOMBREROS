@@ -7,10 +7,10 @@
         <meta name="description"
             content="Dashboard, donde el Admin puede monitorear herramientas">
         <meta name="keywords" content="HTML, CSS, JS, POSTGRESQL">
-        <link rel="shortcut icon" href="../../static/img/icon/producto-icon.ico" type="image/x-icon"> <!--? Ruta Test -->
+        <link rel="shortcut icon" href="../../static/img/icon/contenedor-icon.ico" type="image/x-icon"> <!--? Ruta Test -->
         <link rel="stylesheet" href="../../static/css/admin/style.css"> <!--? Ruta Test -->
-        <link rel="stylesheet" href="../../static/css/admin/producto.css"> <!--? Ruta Test -->
-        <title>Gestión Productos | Administración</title>
+        <link rel="stylesheet" href="../../static/css/admin/contenedor.css"> <!--? Ruta Test -->
+        <title>Gestión Contenedores | Administración</title>
     </head>
     <body>
         <header class="contenedorHeader">
@@ -47,30 +47,31 @@
             <div class="menu-opciones">
                 <ul class="contenedor-list">
                     <li><a href="./home.html">Inicio</a></li> <!--? ruta testt-->
-                    <li><a href="#">Gestión Productos</a></li>
+                    <li><a href="./productos.html">Gestión Productos</a></li>
                     <li><a href="./clientes.html">Gestión Clientes</a></li>
-                    <li><a href="./contenedores.html">Contenedores</a></li>
+                    <li><a href="#">Contenedores</a></li>
                     <li><a href="#">Consultas Admin</a></li>
                     <li><a href="#">Detalles Exportación</a></li>
                 </ul>
             </div>
         </aside>
 
-        <main class="contenedorDashboard tabla-producto">
-            <div class="boton-add-accion">
-                <!--? ruta testt-->
-                <button type="button" onclick="window.location.href='./form/formProducto.html'">Agregar nuevo</button>
+        <main class="contenedorDashboard tabla-contenedor">
+            <div class="buscar-accion">
+                <input placeholder="ID..." type="search" name="search" id="txtBuscarId">
+                <button type="button" id="txtBuscar">
+                    <img src="../../static/img/icon/search-icon.webp" alt="buscar"> <!--? Ruta Test -->
+                </button>
             </div>
             <div class="tabla">
                 <table class="contenedor-tabla">
                     <thead>
                         <tr>
-                            <th>Tipos</th>
-                            <th>Color</th>
-                            <th>Precio</th>
+                            <th>ID</th>
+                            <th>Peso máx</th>
+                            <th>Peso min</th>
+                            <th>Estado</th>
                             <th>Descripción</th>
-                            <th>Activo</th>
-                            <th>Acción</th>
                         </tr>
                     </thead>
                     <tbody>
