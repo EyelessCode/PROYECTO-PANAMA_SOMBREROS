@@ -19,7 +19,7 @@
                     <img src="../../static/img/logo-sombrero.webp"
                             alt="sombrerito"> <!--? Ruta Test -->
                 </span>
-                <h2 class="titulo-producto">Gestión Contenedores</h2>
+                <h2 class="titulo-producto">Consultas Administrador</h2>
             </div>
 
             <div class="content-user">
@@ -32,7 +32,7 @@
     
                 <div class="log-out">
                     <!--? Ruta Test -->
-                    <button onclick="window.replace.href='../client/login.html'">
+                    <button onclick="window.location.replace('../client/login.html')">
                         <img src="../../static/img/log-out-icon.webp" alt="cerrar sesión">
                     </button>
                 </div>
@@ -49,34 +49,38 @@
                     <li><a href="./home.html">Inicio</a></li> <!--? ruta testt-->
                     <li><a href="./productos.html">Gestión Productos</a></li>
                     <li><a href="./clientes.html">Gestión Clientes</a></li>
-                    <li><a href="#">Contenedores</a></li>
+                    <li><a href="./contenedores.html">Contenedores</a></li>
                     <li><a href="#">Consultas Admin</a></li>
                     <li><a href="#">Detalles Exportación</a></li>
                 </ul>
             </div>
         </aside>
 
-        <main class="contenedorDashboard tabla-contenedor">
-            <div class="buscar-accion">
-                <input placeholder="ID..." type="search" name="search" id="txtBuscarId">
-                <button type="button" id="txtBuscar">
-                    <img src="../../static/img/icon/search-icon.webp" alt="buscar"> <!--? Ruta Test -->
-                </button>
+        <main class="contenedorDashboard tabla-consulta">
+            <div class="boton-add-accion">
+                <!--? ruta testt-->
+                <button type="button" onclick="window.location.href='./form/formProducto.html'">Nueva consulta +</button>
             </div>
             <div class="tabla">
                 <table class="contenedor-tabla">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Peso máx</th>
-                            <th>Peso min</th>
-                            <th>Estado</th>
-                            <th>Descripción</th>
+                            <th>Rol</th>
+                            <th>Nombre</th>
+                            <th>Fecha consulta</th>
+                            <th>Categoría</th>
+                            <th>Resultado</th>
                         </tr>
                     </thead>
                     <tbody>
                         <!--* esto también es dinámicoo -->
                     </tbody>
+                        <!--! lo que se debe poner -->
+                        <!-- <button type="button" class="btnAccion btnShow">
+                            <span>
+                                <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
+                            </span>
+                        </button> -->
                     <!--? 7 filas con header -->
                 </table>
             </div>

@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedorHeader .hero-logo span{
+    top: -28px;
+    left: 6px;
+    /* transform: rotate(-35deg); */
+}
+
+.contenedorHeader .hero-logo h2{
+    font-size: 2.7em;
+}
+
+body .tabla-consulta .buscar-accion{
+    grid-column: span 5/span 5;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.boton-add-accion{
+    grid-column: span 5/span 5;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.boton-add-accion button{
+    padding: 7px 10px;
+    box-shadow: 4px 6px black;
+    border-style: none;
+    outline: 1px solid black;
+    background-color: rgb(211, 211, 156);
+    font-size: 0.8em;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    transition: box-shadow 0.1s ease-in-out;
+    font-weight: 500;
+}
+
+.boton-add-accion button:hover{
+    box-shadow: 6px 8px black;
+}
+
+.boton-add-accion button:active{
+    box-shadow: 4px 6px black;
+}
+
+/*  */
+.tabla-consulta .buscar-accion button{
+    background-color: transparent;
+    border-style: none;
+    margin-left: 20px;
+}
+
+.tabla-consulta .buscar-accion{
+    /* testttt */
+    margin-right: 5px;
+
+}
+
+.tabla-consulta .buscar-accion img{
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    filter: drop-shadow(3px 5px black);
+    transition: filter 0.1s ease-in-out;
+}
+
+.tabla-consulta .buscar-accion img:hover{
+    filter: drop-shadow(5px 7.5px black);
+}
+
+.tabla-consulta .buscar-accion img:active{
+    filter: drop-shadow(3px 5px black);
+}
+
+.tabla-consulta .nextOrBack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* outline: 1px solid; */
+    grid-column: span 5/span 5;
+    grid-row-start: 5;
+}
+
+.tabla-consulta .nextOrBack .page{
+    font-size: 1.2rem;
+    margin: 0 6px;
+    outline: 0.5px dashed black;
+    padding: 0 6px;
+    text-align: center;
+}
+
+.tabla-consulta .nextOrBack .btnBack,
+.tabla-consulta .nextOrBack .btnNext{
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+}
+
+.tabla-consulta .nextOrBack .btnBack span img{
+    transform: rotate(180deg);
+}
+
+.tabla-consulta .nextOrBack .btnBack span img,
+.tabla-consulta .nextOrBack .btnNext span img{
+    width: 30px;
+    height: auto;
+    filter: drop-shadow(3.5px 5px black);
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.tabla-consulta .nextOrBack .btnBack span img:hover,
+.tabla-consulta .nextOrBack .btnNext span img:hover{
+    filter: drop-shadow(5px 7px black);
+}
+
+.tabla-consulta .nextOrBack .btnBack span img:active,
+.tabla-consulta .nextOrBack .btnNext span img:active{
+    filter: drop-shadow(3.5px 5px black);
+}
+
+.tabla .contenedor-tabla thead tr th:nth-child(1),
+.tabla .contenedor-tabla tbody tr td:nth-child(1),
+.tabla .contenedor-tabla thead tr th:nth-child(2),
+.tabla .contenedor-tabla tbody tr td:nth-child(2),
+.tabla .contenedor-tabla thead tr th:nth-child(4),
+.tabla .contenedor-tabla tbody tr td:nth-child(4){
+    min-width: 250px;
+}
+
+.tabla .contenedor-tabla thead tr th:nth-child(1),
+.tabla .contenedor-tabla tbody tr td:nth-child(1){
+    min-width: 130px;
+}
+
+.contenedor-tabla .btnAccion{
+    padding: 0;
+    background-color: transparent;
+    border-style: none;
+    /* margin: 0 5px; */
+    cursor: pointer;
+}
+
+.contenedor-tabla .btnAccion span img{
+    width: 23.5px;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+.contenedor-tabla .btnShow:active{
+    span>img{
+        filter: drop-shadow(0.5px 0.5px darkgreen);
+    }
+}

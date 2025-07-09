@@ -342,11 +342,13 @@ footer div{
     background-color:black;
     color: white;
     outline: 1.5px solid rgb(211, 211, 156);
+    
 }
 
 .contenedor-tabla tbody tr td{
     font-size: 0.7em;
     outline: 2px solid black;
+    
 }
 
 .contenedor-tabla tbody tr:nth-child(even){
@@ -354,9 +356,12 @@ footer div{
     font-weight: bolder;
 }
 
-.contenedor-tabla thead tr th,
-.contenedor-tabla tbody tr td{
+.contenedor-tabla thead tr th{
     border-style: none;
     padding: 8.2px;
 
+}
+
+.tabla .contenedor-tabla tbody tr td{
+    padding: 3.15px;
 }
