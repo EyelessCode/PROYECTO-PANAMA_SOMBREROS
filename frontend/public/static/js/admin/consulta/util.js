@@ -4,7 +4,6 @@ const contenedorPopup=document.querySelector('#popup .contenedor-popup')
 
 function mostrarPopup(){
     popup.style.display="flex"
-
 }
 
 function cerrarPopup(){
@@ -12,7 +11,7 @@ function cerrarPopup(){
 }
 
 document.querySelector('#popup').addEventListener("click",(event)=>{
-    event.preventDefault()
+    // event.preventDefault()
     if(!contenedorPopup.contains(event.target)){
         cerrarPopup()
     }

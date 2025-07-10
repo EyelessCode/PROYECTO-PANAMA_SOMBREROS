@@ -158,7 +158,7 @@ body .tabla-consulta .buscar-accion{
     }
 }
 
-/*? popup */
+/*? popup visualizador detalle*/
 body .popup-detalle-consulta{
     display: none;
     /* display: flex; */

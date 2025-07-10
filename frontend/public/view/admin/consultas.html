@@ -75,6 +75,19 @@
                     </thead>
                     <tbody>
                         <!--* esto también es dinámicoo -->
+                        <tr>
+                            <td>Rol</td>
+                            <td>Nombre</td>
+                            <td>Fecha consulta</td>
+                            <td>Categoría</td>
+                            <td>
+                                <button type="button" class="btnAccion btnShow">
+                                    <span>
+                                        <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
+                                    </span>
+                                </button>
+                            </td>
+                        </tr>
                     </tbody>
                         <!--! lo que se debe poner -->
                         <!-- <button type="button" class="btnAccion btnShow">
@@ -99,42 +112,42 @@
 
         <div id="popup" class="popup-detalle-consulta" display="none">
             <!--*  popoupdinámico -->
-                <div class="contenedor-popup">
-                    <h2>Visualizador a detalle</h2>
-                    <div class="part fechaConsulta">
-                        <!--*  diámico -->
-                        <span id="fecha_consulta">2025/07/09</span>
-                    </div>
-
-                    <div class="part info">
-                        <label for="lbCedula">Cédula: </label>
-                        <!--*  diámico -->
-                        <span id="cedula_usuario">0943791061</span>
-                    </div>
-
-                    <div class="part nombre">
-                        <label for="lbNombre">Nombre: </label>
-                        <!--*  diámico -->
-                        <span id="nombre_usuario">Cristhian Guedes</span>
-                    </div>
-
-                    <div class="part correo">
-                        <label for="lbNombre">Correo: </label>
-                        <!--*  diámico -->
-                        <span id="correo_usuario">cristhianjosue03@outlook.com</span>
-                    </div>
-
-                    <div class="part categoria">
-                        <label for="lbNombre">Categoria: </label>
-                        <!--*  diámico -->
-                        <span id="categoria_usuario">REPORTE_VENTA</span>
-                    </div>
-
-                    <div class="part consultaDescripcion">
-                        <label for="txaDescripcion">Consulta: </label>
-                        <textarea name="consultaDescripcion" id="txaDescripcion" readonly></textarea>
-                    </div>
+            <div class="contenedor-popup">
+                <h2>Visualizador a detalle</h2>
+                <div class="part fechaConsulta">
+                    <!--*  diámico -->
+                    <span id="fecha_consulta">2025/07/09</span>
                 </div>
+
+                <div class="part info">
+                    <label for="lbCedula">Cédula: </label>
+                    <!--*  diámico -->
+                    <span id="cedula_usuario">0943791061</span>
+                </div>
+
+                <div class="part nombre">
+                    <label for="lbNombre">Nombre: </label>
+                    <!--*  diámico -->
+                    <span id="nombre_usuario">Cristhian Guedes</span>
+                </div>
+
+                <div class="part correo">
+                    <label for="lbNombre">Correo: </label>
+                    <!--*  diámico -->
+                    <span id="correo_usuario">cristhianjosue03@outlook.com</span>
+                </div>
+
+                <div class="part categoria">
+                    <label for="lbNombre">Categoria: </label>
+                    <!--*  diámico -->
+                    <span id="categoria_usuario">REPORTE_VENTA</span>
+                </div>
+
+                <div class="part consultaDescripcion">
+                    <label for="txaDescripcion">Consulta: </label>
+                    <textarea name="consultaDescripcion" id="txaDescripcion" readonly></textarea>
+                </div>
+            </div>
         </div>
 
         <footer>
