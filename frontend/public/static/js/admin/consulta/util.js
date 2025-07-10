@@ -1,21 +1,25 @@
-const popup=document.getElementById('popup')
-const show=document.getElementById('btnShow')
+// const popup=document.getElementById('popup')
+// const show=document.querySelector('#btnShow')
 const contenedorPopup=document.querySelector('#popup .contenedor-popup')
 
 function mostrarPopup(){
     popup.style.display="flex"
+
 }
 
 function cerrarPopup(){
     popup.style.display="none"
 }
 
-popup.addEventListener("click",(event)=>{
+document.querySelector('#popup').addEventListener("click",(event)=>{
+    event.preventDefault()
     if(!contenedorPopup.contains(event.target)){
         cerrarPopup()
     }
 })
 
-show.addEventListener('click',()=>{
-    mostrarPopup()
-})
+document.querySelectorAll('.btnShow').forEach((boton) => {
+    boton.addEventListener('click',()=>{
+        mostrarPopup()
+    })
+});
