@@ -10,6 +10,7 @@
         <link rel="shortcut icon" href="../../static/img/icon/consulta-icon.ico" type="image/x-icon"> <!--? Ruta Test -->
         <link rel="stylesheet" href="../../static/css/admin/style.css"> <!--? Ruta Test -->
         <link rel="stylesheet" href="../../static/css/admin/consulta.css"> <!--? Ruta Test -->
+        <script defer src="../../static/js/admin/consulta/util.js"></script>
         <title>Consultas Administrador | Administración</title>
     </head>
     <body>
@@ -74,9 +75,87 @@
                     </thead>
                     <tbody>
                         <!--* esto también es dinámicoo -->
+                        <tr>
+                            <td>Rol</td>
+                            <td>Nombre</td>
+                            <td>Fecha consulta</td>
+                            <td>Categoría</td>
+                            <td>
+                                <button id="btnShow" type="button" class="btnAccion btnShow">
+                                    <span>
+                                        <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
+                                    </span>
+                                </button> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rol</td>
+                            <td>Nombre</td>
+                            <td>Fecha consulta</td>
+                            <td>Categoría</td>
+                            <td>
+                                <button id="btnShow" type="button" class="btnAccion btnShow">
+                                    <span>
+                                        <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
+                                    </span>
+                                </button> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rol</td>
+                            <td>Nombre</td>
+                            <td>Fecha consulta</td>
+                            <td>Categoría</td>
+                            <td>
+                                <button id="btnShow" type="button" class="btnAccion btnShow">
+                                    <span>
+                                        <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
+                                    </span>
+                                </button> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rol</td>
+                            <td>Nombre</td>
+                            <td>Fecha consulta</td>
+                            <td>Categoría</td>
+                            <td>
+                                <button id="btnShow" type="button" class="btnAccion btnShow">
+                                    <span>
+                                        <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
+                                    </span>
+                                </button> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rol</td>
+                            <td>Nombre</td>
+                            <td>Fecha consulta</td>
+                            <td>Categoría</td>
+                            <td>
+                                <button id="btnShow" type="button" class="btnAccion btnShow">
+                                    <span>
+                                        <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
+                                    </span>
+                                </button> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rol</td>
+                            <td>Nombre</td>
+                            <td>Fecha consulta</td>
+                            <td>Categoría</td>
+                            <td>
+                                <button id="btnShow" type="button" class="btnAccion btnShow">
+                                    <span>
+                                        <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
+                                    </span>
+                                </button> 
+                            </td>
+                        </tr>
                     </tbody>
                         <!--! lo que se debe poner -->
-                        <!-- <button type="button" class="btnAccion btnShow">
+                        <!-- <button id="btnShow" type="button" class="btnAccion btnShow">
                             <span>
                                 <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
                             </span>
@@ -84,6 +163,7 @@
                     <!--? 7 filas con header -->
                 </table>
             </div>
+
             <div class="nextOrBack">
                 <button type="button" class="btnBack"><span>
                     <img src="../../static/img/next-or-back.webp" alt="back">
@@ -94,6 +174,46 @@
                 </span></button>
             </div>
         </main>
+
+        <div id="popup" class="popup-detalle-consulta" display="none">
+            <!--*  popoupdinámico -->
+                <div class="contenedor-popup">
+                    <h2>Visualizador a detalle</h2>
+                    <div class="part fechaConsulta">
+                        <!--*  diámico -->
+                        <span id="fecha_consulta">2025/07/09</span>
+                    </div>
+
+                    <div class="part info">
+                        <label for="lbCedula">Cédula: </label>
+                        <!--*  diámico -->
+                        <span id="cedula_usuario">0943791061</span>
+                    </div>
+
+                    <div class="part nombre">
+                        <label for="lbNombre">Nombre: </label>
+                        <!--*  diámico -->
+                        <span id="nombre_usuario">Cristhian Guedes</span>
+                    </div>
+
+                    <div class="part correo">
+                        <label for="lbNombre">Correo: </label>
+                        <!--*  diámico -->
+                        <span id="correo_usuario">cristhianjosue03@outlook.com</span>
+                    </div>
+
+                    <div class="part categoria">
+                        <label for="lbNombre">Categoria: </label>
+                        <!--*  diámico -->
+                        <span id="categoria_usuario">REPORTE_VENTA</span>
+                    </div>
+
+                    <div class="part consultaDescripcion">
+                        <label for="txaDescripcion">Consulta: </label>
+                        <textarea name="consultaDescripcion" id="txaDescripcion" readonly></textarea>
+                    </div>
+                </div>
+        </div>
 
         <footer>
             <div class="logo">

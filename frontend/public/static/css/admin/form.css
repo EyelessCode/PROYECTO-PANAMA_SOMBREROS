@@ -115,7 +115,7 @@ form .contenedor-form-generico div{
     flex-flow: row;
     align-items: center;
     justify-content: center;
-    margin: 7.5px;
+    margin: 3.5px 5px;
 }
 
 /* .contenedor-form-generico .part input{
