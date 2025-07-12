@@ -124,18 +124,23 @@ body .tabla-consulta .buscar-accion{
     filter: drop-shadow(3.5px 5px black);
 }
 
-.tabla .contenedor-tabla thead tr th:nth-child(1),
-.tabla .contenedor-tabla tbody tr td:nth-child(1),
 .tabla .contenedor-tabla thead tr th:nth-child(2),
 .tabla .contenedor-tabla tbody tr td:nth-child(2),
 .tabla .contenedor-tabla thead tr th:nth-child(4),
 .tabla .contenedor-tabla tbody tr td:nth-child(4){
-    min-width: 250px;
+    width: 25%;
 }
 
 .tabla .contenedor-tabla thead tr th:nth-child(1),
-.tabla .contenedor-tabla tbody tr td:nth-child(1){
-    min-width: 130px;
+.tabla .contenedor-tabla thead tr th:nth-child(1),
+.tabla .contenedor-tabla thead tr th:nth-child(3),
+.tabla .contenedor-tabla tbody tr td:nth-child(3){
+    width: 15%;
+}
+
+.tabla .contenedor-tabla thead tr th:nth-child(5),
+.tabla .contenedor-tabla tbody tr td:nth-child(5){
+    width: 7.5%;
 }
 
 .contenedor-tabla .btnAccion{

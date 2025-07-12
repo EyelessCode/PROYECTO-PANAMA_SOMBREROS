@@ -328,7 +328,6 @@ footer div{
     grid-row: span 3/span 3;
     background-color: rgb(211, 211, 156);
     box-shadow: 6px 8px black;
-
 }
 
 .tabla .contenedor-tabla{
@@ -346,7 +345,7 @@ footer div{
 
 .contenedor-tabla tbody tr td{
     font-size: 0.7em;
-    outline: 2px solid black;
+    /* outline: 2px solid black; */
     
 }
 
@@ -362,5 +361,5 @@ footer div{
 }
 
 .tabla .contenedor-tabla tbody tr td{
-    padding: 3.15px;
+    padding: 4.15px;
 }
