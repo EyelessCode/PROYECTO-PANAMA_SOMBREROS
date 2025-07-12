@@ -115,7 +115,7 @@ form .contenedor-form-generico div{
     flex-flow: row;
     align-items: center;
     justify-content: center;
-    margin: 3.5px 5px;
+    margin: 5px 7.5px;
 }
 
 /* .contenedor-form-generico .part input{
@@ -155,7 +155,7 @@ form .contenedor-form-generico div{
     font-size: 0.65em;
     font-weight: bolder;
     cursor: pointer;
-    margin: 0 15px;
+    margin: 7.5px;
 
     /* transform: ; */
     /* background-color: rgb(150, 150, 0); */
@@ -186,7 +186,7 @@ form .contenedor-form-generico div{
 
 /*? consulta */
 .contenedor-form-generico .consultaDescripcion textarea{
-    padding: 5px 30px 30px 5px;
+    padding: 5px 40px 60px 5px;
     font-size: 0.75em;
     border-style: none;
     transition: all 0.1s ease-in-out;
