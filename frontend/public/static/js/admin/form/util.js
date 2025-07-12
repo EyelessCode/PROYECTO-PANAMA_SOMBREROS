@@ -54,8 +54,8 @@ if (tipo==='addProducto') {
             </form>
         `
 }else if(tipo==='editProducto'){
-    titulo.innerHTML=`Modificar un Producto`
-    section.innerHTML=
+    document.getElementById('h2Titulo').innerHTML=`Modificar un Producto`
+    document.getElementById('wrapperFormulario').innerHTML=
         `
             <style>
                 .contenedorHeader .hero-logo h2{

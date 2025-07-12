@@ -1,5 +1,3 @@
-// const popup=document.getElementById('popup')
-// const show=document.querySelector('#btnShow')
 const contenedorPopup=document.querySelector('#popup .contenedor-popup')
 
 function mostrarPopup(){
