@@ -301,6 +301,20 @@ footer div{
     mix-blend-mode: multiply;
 }
 
+.tabla-producto button>span,
+.tabla-cliente button>span,
+.tabla-consulta button>span,
+.tabla-detalleExpo button>span{
+    text-align: center;
+}
+
+.tabla-producto button:hover>span,
+.tabla-cliente button:hover>span,
+.tabla-consulta button:hover>span,
+.tabla-detalleExpo button:hover>span{
+    border-bottom: 1px solid black;
+}
+
 /** cliente  */
 .contenedorHeader .hero-logo h2{
     font-size: 3.5em;

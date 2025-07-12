@@ -41,41 +41,16 @@ body .tabla-detalleExpo .buscar-accion{
     font-weight: 500;
 }
 
+/* .tabla-detalleExpo button:hover>span{
+    border-bottom: 1px solid black;
+} */
+
 .boton-add-accion button:hover{
     box-shadow: 6px 8px black;
 }
 
 .boton-add-accion button:active{
     box-shadow: 4px 6px black;
-}
-
-/*  */
-.tabla-detalleExpo .buscar-accion button{
-    background-color: transparent;
-    border-style: none;
-    margin-left: 20px;
-}
-
-.tabla-detalleExpo .buscar-accion{
-    /* testttt */
-    margin-right: 5px;
-
-}
-
-.tabla-detalleExpo .buscar-accion img{
-    width: 37px;
-    height: 37px;
-    cursor: pointer;
-    filter: drop-shadow(3px 5px black);
-    transition: filter 0.1s ease-in-out;
-}
-
-.tabla-detalleExpo .buscar-accion img:hover{
-    filter: drop-shadow(5px 7.5px black);
-}
-
-.tabla-detalleExpo .buscar-accion img:active{
-    filter: drop-shadow(3px 5px black);
 }
 
 .tabla-detalleExpo .nextOrBack{

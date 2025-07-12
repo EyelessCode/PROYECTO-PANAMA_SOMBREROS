@@ -49,35 +49,6 @@ body .tabla-consulta .buscar-accion{
     box-shadow: 4px 6px black;
 }
 
-/*  */
-.tabla-consulta .buscar-accion button{
-    background-color: transparent;
-    border-style: none;
-    margin-left: 20px;
-}
-
-.tabla-consulta .buscar-accion{
-    /* testttt */
-    margin-right: 5px;
-
-}
-
-.tabla-consulta .buscar-accion img{
-    width: 37px;
-    height: 37px;
-    cursor: pointer;
-    filter: drop-shadow(3px 5px black);
-    transition: filter 0.1s ease-in-out;
-}
-
-.tabla-consulta .buscar-accion img:hover{
-    filter: drop-shadow(5px 7.5px black);
-}
-
-.tabla-consulta .buscar-accion img:active{
-    filter: drop-shadow(3px 5px black);
-}
-
 .tabla-consulta .nextOrBack{
     display: flex;
     align-items: center;
