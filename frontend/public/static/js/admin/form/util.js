@@ -144,7 +144,7 @@ if (tipo==='addProducto') {
                     <div class="part boton">
                         <!--* din+amicooo ttulo dinámico  -->
                         <button type="submit" id="btnDinamicoAddOrEdit">Agregar nuevo</button>
-                        <button type="button" onclick="window.location.href='../productos.html'">Cancelar</button>
+                        <button type="button" onclick="window.location.href='../consultas.html'">Cancelar</button>
                     <!--? Ruta Test -->
                     </div>
                 </div>
