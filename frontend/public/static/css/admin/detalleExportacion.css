@@ -14,7 +14,7 @@
     font-size: 2.7em;
 }
 
-body .tabla-consulta .buscar-accion{
+body .tabla-detalleExpo .buscar-accion{
     grid-column: span 5/span 5;
     display: inline-flex;
     justify-content: flex-end;
@@ -50,19 +50,19 @@ body .tabla-consulta .buscar-accion{
 }
 
 /*  */
-.tabla-consulta .buscar-accion button{
+.tabla-detalleExpo .buscar-accion button{
     background-color: transparent;
     border-style: none;
     margin-left: 20px;
 }
 
-.tabla-consulta .buscar-accion{
+.tabla-detalleExpo .buscar-accion{
     /* testttt */
     margin-right: 5px;
 
 }
 
-.tabla-consulta .buscar-accion img{
+.tabla-detalleExpo .buscar-accion img{
     width: 37px;
     height: 37px;
     cursor: pointer;
@@ -70,15 +70,15 @@ body .tabla-consulta .buscar-accion{
     transition: filter 0.1s ease-in-out;
 }
 
-.tabla-consulta .buscar-accion img:hover{
+.tabla-detalleExpo .buscar-accion img:hover{
     filter: drop-shadow(5px 7.5px black);
 }
 
-.tabla-consulta .buscar-accion img:active{
+.tabla-detalleExpo .buscar-accion img:active{
     filter: drop-shadow(3px 5px black);
 }
 
-.tabla-consulta .nextOrBack{
+.tabla-detalleExpo .nextOrBack{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,7 +87,7 @@ body .tabla-consulta .buscar-accion{
     grid-row-start: 5;
 }
 
-.tabla-consulta .nextOrBack .page{
+.tabla-detalleExpo .nextOrBack .page{
     font-size: 1.2rem;
     margin: 0 6px;
     outline: 0.5px dashed black;
@@ -95,32 +95,32 @@ body .tabla-consulta .buscar-accion{
     text-align: center;
 }
 
-.tabla-consulta .nextOrBack .btnBack,
-.tabla-consulta .nextOrBack .btnNext{
+.tabla-detalleExpo .nextOrBack .btnBack,
+.tabla-detalleExpo .nextOrBack .btnNext{
     background-color: transparent;
     border-style: none;
     cursor: pointer;
 }
 
-.tabla-consulta .nextOrBack .btnBack span img{
+.tabla-detalleExpo .nextOrBack .btnBack span img{
     transform: rotate(180deg);
 }
 
-.tabla-consulta .nextOrBack .btnBack span img,
-.tabla-consulta .nextOrBack .btnNext span img{
+.tabla-detalleExpo .nextOrBack .btnBack span img,
+.tabla-detalleExpo .nextOrBack .btnNext span img{
     width: 30px;
     height: auto;
     filter: drop-shadow(3.5px 5px black);
     transition: box-shadow 0.1s ease-in-out;
 }
 
-.tabla-consulta .nextOrBack .btnBack span img:hover,
-.tabla-consulta .nextOrBack .btnNext span img:hover{
+.tabla-detalleExpo .nextOrBack .btnBack span img:hover,
+.tabla-detalleExpo .nextOrBack .btnNext span img:hover{
     filter: drop-shadow(5px 7px black);
 }
 
-.tabla-consulta .nextOrBack .btnBack span img:active,
-.tabla-consulta .nextOrBack .btnNext span img:active{
+.tabla-detalleExpo .nextOrBack .btnBack span img:active,
+.tabla-detalleExpo .nextOrBack .btnNext span img:active{
     filter: drop-shadow(3.5px 5px black);
 }
 
@@ -158,8 +158,8 @@ body .tabla-consulta .buscar-accion{
     }
 }
 
-/*? popup visualizador detalle*/
-body .popup-detalle-consulta{
+/*? popup */
+body .popup-detalle-detalleExpo{
     display: none;
     /* display: flex; */
     z-index: 1000;
@@ -177,9 +177,9 @@ body .popup-detalle-consulta{
     color: white;
 }
 
-.popup-detalle-consulta .contenedor-popup{
+.popup-detalle-detalleExpo .contenedor-popup{
     background-color: rgb(150, 150, 0);
-    padding: 15px 30px 50px;
+    padding: 15px 30px;
     box-shadow: 10px 10px black;
     display: flex;
     flex-flow: column;
@@ -187,7 +187,7 @@ body .popup-detalle-consulta{
     justify-content: center;
 }
 
-.popup-detalle-consulta .contenedor-popup>div{
+.popup-detalle-detalleExpo .contenedor-popup>div{
     margin: 10px 0;
     display: flex;
     flex-flow: row;
@@ -196,17 +196,13 @@ body .popup-detalle-consulta{
     align-items: center;
 }
 
-.popup-detalle-consulta .contenedor-popup .correo>span{
-    font-style: italic;
-}
-
-.popup-detalle-consulta .contenedor-popup .fechaConsulta{
+.popup-detalle-detalleExpo .contenedor-popup .fechaRegistro{
     display: inline-flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
-.popup-detalle-consulta .contenedor-popup .fechaConsulta span{
+.popup-detalle-detalleExpo .contenedor-popup .fechaRegistro span{
     font-style: italic;
     font-size: 1em;
     outline: 0.5px dashed white;
@@ -215,10 +211,14 @@ body .popup-detalle-consulta{
     font-weight: bolder;
 }
 
-.popup-detalle-consulta .contenedor-popup>div label{
+.popup-detalle-detalleExpo .contenedor-popup>div label{
     font-weight: bolder;
     color: black;
     font-size: 1.25em;
+}
+
+.popup-detalle-detalleExpo .contenedor-popup .moneda>label:nth-child(3){
+    padding-left: 70px;
 }
 
 .contenedor-popup h2{
@@ -229,24 +229,6 @@ body .popup-detalle-consulta{
     font-weight: bolder;
 }
 
-.contenedor-popup .consultaDescripcion textarea{
-    padding: 7.5px 160px 80px 7.5px;
-    font-size: 0.75em;
-    border-style: none;
-    transition: all 0.1s ease-in-out;
-    border-radius: 10px;
-}
-
-.contenedor-popup .consultaDescripcion textarea::placeholder{
-    color: gray;
-}
-
-.contenedor-popup .consultaDescripcion textarea:focus{
-    border-style: none;
-    outline: 3px solid black;
-    box-shadow: 6px 6px black;
-}
-
-.popup-detalle-consulta .contenedor-popu:hover{
+.popup-detalle-detalleExpo .contenedor-popu:hover{
     box-shadow: 13px 13px black;
 }
