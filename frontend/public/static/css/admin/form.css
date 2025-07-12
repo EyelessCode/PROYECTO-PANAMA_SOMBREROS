@@ -75,7 +75,7 @@ body .wrapper-form .wrapper{
 form .contenedor-form-generico div label{
     font-size: 0.8em;
     font-weight: bolder;
-    margin: 5px 10px 5px 0;
+    margin: 3.5px 10px 3.5px 0;
 }
 
 /* form .contenedor-form-generico div:nth-child(1) label{
@@ -405,3 +405,6 @@ body .popup-detalle-consulta{
     box-shadow: 13px 13px black;
 }
 
+.popup-nueva-consulta .contenedor-popup .newCategory{
+    margin: 3px;
+}

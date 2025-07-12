@@ -1,34 +1,10 @@
-const contenedorPopup=document.querySelector('#popup .contenedor-popup')
-
-function mostrarPopup(){
-    popup.style.display="flex"
-}
-
-function cerrarPopup(){
-    popup.style.display="none"
-}
-
-document.querySelector('#popup').addEventListener("click",(event)=>{
-    // event.preventDefault()
-    if(!contenedorPopup.contains(event.target)){
-        cerrarPopup()
-    }
-})
-
-document.querySelectorAll('.btnCan').forEach((boton) => {
-    boton.addEventListener('click',()=>{
-        mostrarPopup()
-    })
-});
-const section=document.getElementById('wrapperFormulario')
-const titulo=document.getElementById('h2Titulo')
 const urlParams=new URLSearchParams(window.location.search)
 const tipo=urlParams.get('type')
 
 
 if (tipo==='addProducto') {
-    titulo.innerHTML=`Agregar un nuevo Producto`
-    section.innerHTML=
+    document.getElementById('h2Titulo').innerHTML=`Agregar un nuevo Producto`
+    document.getElementById('wrapperFormulario').innerHTML=
         `
             <style>
                 .contenedorHeader .hero-logo span{
@@ -133,8 +109,8 @@ if (tipo==='addProducto') {
             </form>
         `
 }else if(tipo==='addConsulta'){
-    titulo.innerHTML=`Agregar nueva Consulta`
-    section.innerHTML=
+    document.getElementById('h2Titulo').innerHTML=`Agregar nueva Consulta`
+    document.getElementById('wrapperFormulario').innerHTML=
         `
             <h3>Consulta</h3>
             <form action="/consulta" method="post">
@@ -157,7 +133,7 @@ if (tipo==='addProducto') {
                             <!--? dinámico -->
                             <option selected value="0"> -- Seleccionar -- </option>
                         </select>
-                        <button type="button">+</button>
+                        <button id="btnAddCategoria" type="button">+</button>
                     </div>
 
                     <div class="part consultaDescripcion">
@@ -174,8 +150,32 @@ if (tipo==='addProducto') {
                 </div>
             </form>
         `
+    const contenedorPopup=document.querySelector('#popup .contenedor-popup')
+
+    function mostrarPopup(){
+        popup.style.display="flex"
+    }
+
+    function cerrarPopup(){
+        popup.style.display="none"
+    }
+
+    document.querySelector('#popup').addEventListener("click",(event)=>{
+        // event.preventDefault()
+        if(!contenedorPopup.contains(event.target)){
+            cerrarPopup()
+        }
+    })
+
+    document.querySelector('#btnCancelar').addEventListener("click",()=>{
+        cerrarPopup()
+    })
+
+    document.querySelector('#btnAddCategoria').addEventListener("click",()=>{
+        mostrarPopup()
+    })
 }else{
-    section.innerHTML=
+    document.getElementById('wrapperFormulario').innerHTML=
         `
             <div class="notFound">
                 <h2>A dónde vas...?</h2>
