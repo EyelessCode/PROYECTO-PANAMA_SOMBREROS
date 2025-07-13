@@ -9,7 +9,7 @@
 body{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(4,1fr) auto;
     gap: 7.5px;
 
     width: 100vw;
@@ -169,83 +169,27 @@ body{
 }
 /*? temp  */
 
+/*! testeando en otra rama */
 .contenedorListaProductos .list-productos{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(5,1fr);
+    display: flex;
+    flex-flow: row wrap;
 }
 
-/*! 1RA FORMA  */
-.first-form .item-1{
-    grid-column: span 2/span 2;
-    grid-row: span 3/span 3;
+.list-productos .item-producto .info-producto{
+    outline: 1px solid;
+    text-align: center;
+    color: black;
+    background-color: #f59e0b;
+    font-weight: bolder;
+    border-radius: 0 0 50px 50px;
+    padding: 7.5px;
 }
 
-.first-form .item-2{
-    grid-column-start: 3;
-    grid-row: span 3/span 3;
+.list-productos .item-producto div img{
+    width: 95px;
+    height: auto;
 }
-
-.first-form .item-3{
-    grid-column-start: 4;
-    grid-column: span 2/span 2;
-    grid-row: span 3/span 3;
-}
-
-.first-form .item-4{
-    grid-row-start: 4;
-    grid-row: span 2/span 2;
-}
-
-.first-form .item-5{
-    grid-row-start: 4;
-    grid-column-start: 2;
-    grid-row: span 2/span 2;
-    grid-column: span 2/span 2;
-}
-
-.first-form .item-6{
-    grid-row-start: 4;
-    grid-column-start: 4;
-    grid-row: span 2/span 2;
-    grid-column: span 2/span 2;
-}
-
-/*! 2DA FORMA  */
-.second-form .item-1{
-    grid-row: span 3/span 3;
-}
-
-.second-form .item-2{
-    grid-column-start: 2;
-    grid-column: span 2/span 2;
-    grid-row: span 3/span 3;
-}
-
-.second-form .item-3{
-    grid-column-start: 4;
-    grid-column: span 2/span 2;
-    grid-row: span 3/span 3;
-}
-
-.second-form .item-4{
-    grid-row-start: 4;
-    grid-row: span 2/span 2;
-    grid-column: span 2/span 2;
-}
-
-.second-form .item-5{
-    grid-row-start: 4;
-    grid-column-start: 3;
-    grid-row: span 2/span 2;
-}
-
-.second-form .item-6{
-    grid-row-start: 4;
-    grid-column-start: 4;
-    grid-row: span 2/span 2;
-    grid-column: span 2/span 2;
-}
+/*! testeando en otra rama */
 
 body footer{
     grid-column: span 5 / span 5;
