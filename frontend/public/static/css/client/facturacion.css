@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedorHeader .hero-logo h2{
+    font-size: 3.5em;
+}
+
+body .contenedor-producto-facturacion{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body .contenedor-producto-facturacion .resumen-producto{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f59e0b;
+    box-shadow: 8px 8px black;
+    padding: 25px;
+}
+
+.contenedor-producto-facturacion .resumen-producto h3{
+    /* margin: 10px 0; */
+    font-size: 2em;
+}
+
+.resumen-producto .info-producto .item-info-producto{
+    flex-flow: row;
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.resumen-producto .info-producto .item-info-producto p{
+    font-weight: bolder;
+}
+
+.resumen-producto .info-producto .item-info-producto span{
+    color: white;
+    font-weight: bolder;
+}
+
+.resumen-producto .info-producto .item-info-producto #spanTipo{
+    margin: 0 30px 0 5px;
+}
+
+.resumen-producto .info-producto .item-info-producto #spanTalla,
+.resumen-producto .info-producto .item-info-producto #spanColor,
+.resumen-producto .info-producto .item-info-producto #spanIVA,
+.resumen-producto .info-producto .item-info-producto #spanArrancel,
+.resumen-producto .info-producto .item-info-producto #spanSeguro{
+    margin: 0 5px 0 5px;
+}
+
+.resumen-producto .info-producto .item-info-producto:nth-child(2) #spanTipo,
+.resumen-producto .info-producto .item-info-producto #spanUnidades,
+.resumen-producto .info-producto .item-info-producto #spanSubtotal,
+.resumen-producto .info-producto .item-info-producto #spanTransporte{
+    margin: 0 120px 0 5px;
+}
+
+.resumen-producto .info-producto .item-info-producto #spanUnidades{
+    margin: 0 120px 0 5px;
+}
+
+.contenedor-producto-facturacion .resumen-producto .boton-accion{
+    margin-top: 5px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumen-producto .boton-accion a{
+    text-decoration: none;
+}
+
+.resumen-producto .boton-accion a button,
+.resumen-producto .boton-accion button{
+    color: black;
+    font-weight: bolder;
+    padding: 10px;
+    background-color: chartreuse;
+    border-radius: 10px;
+    font-size: 0.65em;
+    cursor: pointer;
+    box-shadow: 4px 4.5px black;
+    border-style: none;
+    outline: 2px solid black;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.resumen-producto .boton-accion a button:hover,
+.resumen-producto .boton-accion button:hover{
+    box-shadow: 5px 6.5px black;
+
+}
+
+.resumen-producto .boton-accion a button:active,
+.resumen-producto .boton-accion button:active{
+    box-shadow: 2px 2px black;
+}
+
+.resumen-producto .boton-accion a button:nth-child(1){
+    background-color: darkgreen;
+    color: white;
+}
+
+.resumen-producto .boton-accion button:nth-child(2){
+    background-color: darkred;
+    color: white;
+    margin-left: 30px;
+}

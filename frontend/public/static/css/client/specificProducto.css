@@ -89,7 +89,7 @@ body .contenedor-info-producto section{
     background-color: chartreuse;
     font-size: 1em;
     cursor: pointer;
-    box-shadow: 7px 5px;
+    box-shadow: 7px 5px black;
     border-style: none;
     outline: 2px solid black;
     transition: box-shadow 0.2s ease-in-out;
@@ -97,5 +97,11 @@ body .contenedor-info-producto section{
 
 .resumen-producto .boton-accion a button:hover{
     box-shadow: 9px 9px black;
+
+}
+
+.resumen-producto .boton-accion a button:active{
+    /* background: linear-gradient(to bottom,rgb(249, 59, 59),rgb(85, 85, 253)); */
+    box-shadow: 7px 5px black;
 
 }

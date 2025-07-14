@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="EyelessCode">
+        <meta name="keywords" content="HTML, CSS, JS, POSTGRESQL">
+        <meta name="decription"
+            content="Página de facturación del cliente">
+        <link rel="shortcut icon" href="../../static/img/icon/factura-icon.ico"
+            type="image/x-icon">
+        <link rel="stylesheet" href="../../static/css/client/style.css"> <!--? Ruta Test -->
+        <link rel="stylesheet" href="../../static/css/client/facturacion.css"> <!--? Ruta Test -->
+        <title>Facturación de Producto - Detalles | Cliente</title>
+    </head>
+    <body>
+        <header class="contenedorHeader">
+            <div class="hero-logo">
+                <span class="imagenn">
+                    <img src="../../static/img/logo-sombrero.webp"
+                        alt="sombrerito"> <!--? Ruta Test -->
+                </span>
+                <h2 id="h2Titulo">Facturación del Producto</h2>
+            </div>
+
+            <div class="content-user">
+                <div class="barra-user">
+                    <img src="../../static/img/perfil-logo.webp" alt="perfil">
+                    <!-- <p>FernándezFernándezFernández 15</p> -->
+                    <!--* lo de arriba es dinámico -->
+                    <!--* Dinámico -->
+                </div>
+
+                <div class="log-out">
+                    <!--? Ruta Test -->
+                    <button onclick="window.location.replace('../client/login.html')">
+                        <img src="../../static/img/log-out-icon.webp" alt="cerrar sesión">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="contenedor-main contenedor-producto-facturacion">
+            <section class="resumen-producto">
+                <h3>Facturación</h3>
+                <div class="info-producto">
+                    <div class="item-info-producto">
+                        <p>Nombre: </p> <span id="spanTipo">---</span>
+                        <p>Talla: </p> <span id="spanTalla">---</span>
+                    </div>
+                    
+                    <div class="item-info-producto">
+                        <p>Tipo: </p> <span id="spanTipo">---</span>
+                        <p>Color: </p> <span id="spanColor">---</span>
+                        
+                    </div>
+                    
+                    <div class="item-info-producto">
+                        <p>Unidades: </p> <span id="spanUnidades">---</span>
+                        <p>% IVA: </p> <span id="spanIVA">---</span>
+
+                    </div>
+
+                    <div class="item-info-producto">
+                        <p>Subtotal: </p> <span id="spanSubtotal">---</span>
+                        <p>% Arranceles: </p> <span id="spanArrancel">---</span>
+
+                    </div>
+
+                    <div class="item-info-producto">
+                        <p>Transporte: </p> <span id="spanTransporte">---</span>
+                        <p>% Seguro Internacional: </p> <span id="spanSeguro">---</span>
+                        
+                    </div>
+                    
+                    <div class="item-info-producto">
+                        <p>Total: </p> <span id="spanTotal">---</span>
+                        
+                    </div>
+                </div>
+                <div class="boton-accion">
+                    <a href="../ventas.html">
+                        <button>Ir a Pago</button>
+                    </a>
+                    <button onclick="window.location.href='./productos.html'">Salir</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="logo">
+                <img src="../../static/img/logo-sombrero.webp" alt="logo">
+                <p>&copy; <span>Panamá Sombreros</span></p>
+            </div>
+
+            <div class="content_footer">
+                <p>Aquí hacemos entregas de nuestro productos! Observa, compra, recibe y DISFRUTA!</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -40,6 +40,10 @@ form .contenedor-form-generico div label{
     margin: 3.5px 10px 3.5px 0;
 }
 
+form .contenedor-form-generico div span{
+    color: white;
+}
+
 /* form .contenedor-form-generico div:nth-child(1) label{
     font-size: 0.8em;
 } */
