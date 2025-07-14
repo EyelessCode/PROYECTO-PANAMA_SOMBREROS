@@ -30,11 +30,11 @@ body .contenedorListaProductos{
 
 .contenedorListaProductos .list-productos .item-producto:hover{
     box-shadow: 8px 9px black;
-    background-color: #a46b08;
+    background-color: #ffb639;
 
-    /* >.info-producto{
+    >.info-producto{
     background-color: #f59e0b;
-    } */
+    }
 }
 
 .contenedorListaProductos .list-productos{
