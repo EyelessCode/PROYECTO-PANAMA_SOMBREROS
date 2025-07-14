@@ -28,6 +28,15 @@ body .contenedorListaProductos{
     transition: all 0.1s ease-in;
 }
 
+.contenedorListaProductos .list-productos .item-producto:hover{
+    box-shadow: 8px 9px black;
+    background-color: #ffb639;
+
+    >.info-producto{
+    background-color: #f59e0b;
+    }
+}
+
 .list-productos .item-producto .boton-accion{
     margin-top: 5px;
     display: flex;
@@ -50,21 +59,12 @@ body .contenedorListaProductos{
     box-shadow: 4px 4px;
     border-style: none;
     outline: 2px solid black;
-    transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
 }
 
 .list-productos .item-producto .boton-accion a button:hover{
     box-shadow: 6px 6px black;
 
-}
-
-.contenedorListaProductos .list-productos .item-producto:hover{
-    box-shadow: 8px 9px black;
-    background-color: #ffb639;
-
-    >.info-producto{
-    background-color: #f59e0b;
-    }
 }
 
 .contenedorListaProductos .list-productos{

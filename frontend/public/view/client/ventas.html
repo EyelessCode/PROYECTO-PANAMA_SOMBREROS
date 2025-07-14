@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="EyelessCode">
+        <meta name="keywords" content="HTML, CSS, JS, POSTGRESQL">
+        <meta name="decription"
+            content="Página de ventas para el cliente">
+        <link rel="shortcut icon" href="../../static/img/icon/venta-icon.ico"
+            type="image/x-icon">
+        <link rel="stylesheet" href="../../static/css/client/style.css"> <!--? Ruta Test -->
+        <link rel="stylesheet" href="../../static/css/client/venta.css"> <!--? Ruta Test -->
+        <title>Venta del Producto - Especificaciones | Cliente</title>
+    </head>
+    <body>
+        <header class="contenedorHeader">
+            <div class="hero-logo">
+                <span class="imagenn">
+                    <img src="../../static/img/logo-sombrero.webp"
+                        alt="sombrerito"> <!--? Ruta Test -->
+                </span>
+                <h2 id="h2Titulo">Venta del Producto</h2>
+            </div>
+
+            <div class="content-user">
+                <div class="barra-user">
+                    <img src="../../static/img/perfil-logo.webp" alt="perfil">
+                    <!-- <p>FernándezFernándezFernández 15</p> -->
+                    <!--* lo de arriba es dinámico -->
+                    <!--* Dinámico -->
+                </div>
+
+                <div class="log-out">
+                    <!--? Ruta Test -->
+                    <button onclick="window.location.replace('../client/login.html')">
+                        <img src="../../static/img/log-out-icon.webp" alt="cerrar sesión">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="contenedor-main contenedor-form-producto-venta">
+            <section class="form-venta-wrapper">
+                <h3>Formulario - Ventas</h3>
+                <form action="/producto" method="post">
+                    <div class="contenedor-form-generico">
+                        <div class="part tipoSombrero">
+                            <label for="lbTipo">Nombre: </label>
+                            <span id="spanTipo">---</span>
+                        </div>
+                        
+                        <div class="part talla">
+                            <label for="cmbTalla">Talla: </label>
+                            <select name="talla" id="cmbTalla">
+                                <!--? dinámico -->
+                                <option selected value="0"> -- Seleccionar -- </option>
+                            </select>
+                        </div>
+                        
+                        <div class="part color">
+                            <label for="cmbColor">Color: </label>
+                            <select name="color" id="cmbColor">
+                                <!--? dinámico -->
+                                <option selected value="0"> -- | -- </option>
+                            </select>
+                            <div class="ejemploColor"></div>
+                        </div>
+                        
+                        <div class="part cantidad">
+                            <label for="txtCantidad">Cantidad: </label>
+                            <input type="text" name="cantidad" id="txtCantidad"
+                            placeholder="..." size="5" required>
+                        </div>
+                        
+                        <div class="part precio">
+                            <label for="lbPrecio">Precio: </label>
+                            <span id="spanPrecio">---</span>
+                        </div>
+
+                        <div class="part boton">
+                            <!--* din+amicooo ttulo dinámico  -->
+                            <button type="submit" id="btnDinamicoAddOrEdit">Ir a Facturación</button>
+                            <button type="button" onclick="window.location.href='./specific/producto.html'">Cancelar</button>
+                        <!--? Ruta Test -->
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="logo">
+                <img src="../../static/img/logo-sombrero.webp" alt="logo">
+                <p>&copy; <span>Panamá Sombreros</span></p>
+            </div>
+
+            <div class="content_footer">
+                <p>Aquí hacemos entregas de nuestro productos! Observa, compra, recibe y DISFRUTA!</p>
+            </div>
+        </footer>
+    </body>
+</html>
