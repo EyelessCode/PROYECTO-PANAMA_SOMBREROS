@@ -13,9 +13,9 @@ body .contenedorListaProductos{
 
 .contenedorListaProductos .list-productos .item-producto{
     outline: 2px solid;
-    padding: 15px;
+    padding: 10px;
     background-color: #f59e0b;
-    cursor: pointer;
+    /* cursor: pointer; */
     flex-grow: 1;
     flex-basis: 0;
     min-width: 13%;
@@ -26,6 +26,36 @@ body .contenedorListaProductos{
     align-items: center;
     justify-content: center;
     transition: all 0.1s ease-in;
+}
+
+.list-productos .item-producto .boton-accion{
+    margin-top: 5px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-productos .item-producto .boton-accion a{
+    text-decoration: none;
+}
+
+.list-productos .item-producto .boton-accion a button{
+    color: black;
+    font-weight: bolder;
+    padding: 5px;
+    background-color: lightblue;
+    font-size: 0.7em;
+    cursor: pointer;
+    box-shadow: 4px 4px;
+    border-style: none;
+    outline: 2px solid black;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.list-productos .item-producto .boton-accion a button:hover{
+    box-shadow: 6px 6px black;
+
 }
 
 .contenedorListaProductos .list-productos .item-producto:hover{
