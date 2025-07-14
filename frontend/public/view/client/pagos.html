@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="EyelessCode">
+        <meta name="keywords" content="HTML, CSS, JS, POSTGRESQL">
+        <meta name="decription"
+            content="Página de PAGO del cliente">
+        <link rel="shortcut icon" href="../../static/img/icon/pago-icon.ico"
+            type="image/x-icon">
+        <link rel="stylesheet" href="../../static/css/client/style.css"> <!--? Ruta Test -->
+        <link rel="stylesheet" href="../../static/css/client/pago.css"> <!--? Ruta Test -->
+        <title>Pago Producto | Métodod de Pago | Cliente</title>
+    </head>
+    <body>
+        <header class="contenedorHeader">
+            <div class="hero-logo">
+                <span class="imagenn">
+                    <img src="../../static/img/logo-sombrero.webp"
+                        alt="sombrerito"> <!--? Ruta Test -->
+                </span>
+                <h2 id="h2Titulo">Método de Pago</h2>
+            </div>
+
+            <div class="content-user">
+                <div class="barra-user">
+                    <img src="../../static/img/perfil-logo.webp" alt="perfil">
+                    <!-- <p>FernándezFernándezFernández 15</p> -->
+                    <!--* lo de arriba es dinámico -->
+                    <!--* Dinámico -->
+                </div>
+
+                <div class="log-out">
+                    <!--? Ruta Test -->
+                    <button onclick="window.location.replace('../client/login.html')">
+                        <img src="../../static/img/log-out-icon.webp" alt="cerrar sesión">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="contenedor-main contenedor-producto-pago">
+            <section class="resumen-producto">
+                <h3>Facturación</h3>
+                <div class="contenedor-form-generico">
+                    <div class="part metodo-pago">
+                        <input type="radio" checked name="metodo-pago" id="1">
+                        <label for="lbTarjetaCredito">Tarjeta Crédito</label>
+
+                        <input type="radio" name="metodo-pago" id="2">
+                        <label for="lbTarjetaDebito">Tarjeta Débito</label>
+
+                        <input type="radio" disabled name="metodo-pago" id="0">
+                        <label for="lbOtros">Otros</label>
+                    </div>
+                    
+                    <div class="part info-tarjeta">
+                        <input type="text" name="tarjeta" id="txtTarjeta"
+                        placeholder="N° Tarjeta..." maxlength="16" minlength="16" required>
+
+                        <input type="text" name="titular" id="txtTitular"
+                        placeholder="Titular..." maxlength="30" required>
+                    </div>
+
+                    <div class="part info-tarjeta-2">
+                        <input type="text" name="fechaVencimiento" id="txtFechaVenci"
+                        placeholder="Fecha de vencimiento..." maxlength="5" minlength="5" required>
+
+                        <input type="text" name="cvv" id="txtCvv"
+                        placeholder="CVV..." size="4" maxlength="3" minlength="3" required>
+                    </div>
+
+                    <div class="part info-usuario">
+                        <select>
+                            <option selected value="0">-- País --</option>
+                        </select>
+
+                        <input type="text" name="direccion" id="txtDireccion"
+                        placeholder="Dirección..." required>
+                    </div>
+
+                    <div class="part info-usuario-2">
+                        <input type="text" name="cedula" id="txtCedula"
+                        placeholder="Cédula..." maxlength="10" minlength="10" required>
+                    </div>
+
+                    <div class="part boton">
+                        <!--* din+amicooo ttulo dinámico  -->
+                        <button type="submit" onclick="window.location.href='./facturaciones.html'">Comprar</button>
+                        <button type="button" onclick="window.location.href='./specific/producto.html'">Salir</button>
+                    <!--? Ruta Test -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="logo">
+                <img src="../../static/img/logo-sombrero.webp" alt="logo">
+                <p>&copy; <span>Panamá Sombreros</span></p>
+            </div>
+
+            <div class="content_footer">
+                <p>Aquí hacemos entregas de nuestro productos! Observa, compra, recibe y DISFRUTA!</p>
+            </div>
+        </footer>
+    </body>
+</html>

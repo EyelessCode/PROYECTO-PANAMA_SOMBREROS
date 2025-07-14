@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body .contenedor-producto-pago{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body .contenedor-producto-pago .resumen-producto{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f59e0b;
+    box-shadow: 8px 8px black;
+    padding: 25px;
+}
+
+.contenedor-producto-pago .resumen-producto h3{
+    /* margin: 10px 0; */
+    font-size: 2em;
+}
+
+.contenedor-producto-pago .resumen-producto .contenedor-form-generico div{
+    display: flex;
+    flex-flow: row;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+.resumen-producto .contenedor-form-generico .info-usuario,
+.resumen-producto .contenedor-form-generico .info-usuario-2{
+    flex-flow: row;
+    justify-content: center;
+}
+
+.resumen-producto .contenedor-form-generico .metodo-pago label{
+    margin-right: 20px;
+}
+
+.resumen-producto .contenedor-form-generico .info-tarjeta input,
+.resumen-producto .contenedor-form-generico .info-tarjeta-2 input,
+.resumen-producto .contenedor-form-generico .info-usuario input,
+.resumen-producto .contenedor-form-generico .info-usuario-2 input{
+    padding: 7.5px;
+    font-size: 0.75em;
+    border-style: none;
+    transition: all 0.1s ease-in-out;
+    border-radius: 10px;
+    margin: 5px 10px 5px 0;
+}
+
+.resumen-producto .contenedor-form-generico .info-tarjeta input::placeholder,
+.resumen-producto .contenedor-form-generico .info-tarjeta-2 input::placeholder,
+.resumen-producto .contenedor-form-generico .info-usuario input::placeholder,
+.resumen-producto .contenedor-form-generico .info-usuario-2 input::placeholder{
+    color: gray;
+}
+
+.resumen-producto .contenedor-form-generico .info-tarjeta input:focus,
+.resumen-producto .contenedor-form-generico .info-tarjeta-2 input:focus,
+.resumen-producto .contenedor-form-generico .info-usuario input:focus,
+.resumen-producto .contenedor-form-generico .info-usuario-2 input:focus{
+    border-style: none;
+    outline: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+
+.resumen-producto .contenedor-form-generico div select{
+    padding: 7.5px;
+    font-style: italic;
+    border-radius: 10px;
+    border-style: none;
+    transition: outline,box-shadow 0.1s ease-in-out;
+    /* outline: 2px solid black; */
+    text-align: center;
+    margin-right: 30px;
+}
+
+.resumen-producto .contenedor-form-generico div select:focus{
+    outline: 2px solid black;
+    box-shadow: 6px 6px black;
+}
+
+.resumen-producto .contenedor-form-generico .boton{
+    display: flex;
+    justify-content: center;
+}
+
+.resumen-producto .contenedor-form-generico .boton button{
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 4px 4.5px black;
+    font-size: 0.65em;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 7.5px;
+
+    /* transform: ; */
+    /* background-color: rgb(150, 150, 0); */
+    color: black;
+    border: 2px solid black;
+    /* transition: all 0.3s ease-out; */
+    transition: all 0.1s ease-in;
+}
+
+.resumen-producto .contenedor-form-generico .boton button:hover{
+    box-shadow: 5px 6.5px black;
+}
+
+.resumen-producto .contenedor-form-generico .boton button:active{
+    /* background: linear-gradient(to bottom,rgb(249, 59, 59),rgb(85, 85, 253)); */
+    box-shadow: 2px 2px black;
+}
+
+.resumen-producto .contenedor-form-generico .boton button:nth-child(1){
+    background-color: darkgreen;
+    color: white;
+}
+
+.resumen-producto .contenedor-form-generico .boton button:nth-child(2){
+    background-color: darkred;
+    color: white;
+}
