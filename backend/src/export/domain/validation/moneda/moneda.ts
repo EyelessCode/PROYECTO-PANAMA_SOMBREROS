@@ -6,11 +6,12 @@ import { SimboloMoneda } from "./simboloMoneda"
 export class Moneda{
     id:IdMoneda
     nombre:NombreMoneda
-    codigoIso:CodigoIsoMoneda
+    codigoIso?:CodigoIsoMoneda
     simbolo:SimboloMoneda
 
-    constructor(id:IdMoneda,nombre:NombreMoneda,codigoIso:CodigoIsoMoneda,
-        simbolo:SimboloMoneda
+    constructor(id:IdMoneda,nombre:NombreMoneda,
+        simbolo:SimboloMoneda,
+        codigoIso?:CodigoIsoMoneda
     ) {
         this.id=id
         this.nombre=nombre
@@ -22,7 +23,7 @@ export class Moneda{
         return {
             id: this.id.id,
             nombre: this.nombre.nombre,
-            codigoIso: this.codigoIso.codigoIso,
+            codigoIso: this.codigoIso?.codigoIso,
             simbolo: this.simbolo.simbolo
         }
     }
@@ -31,8 +32,8 @@ export class Moneda{
         return new Moneda(
             new IdMoneda(data.id),
             new NombreMoneda(data.nombre),
-            new CodigoIsoMoneda(data.codigoIso),
-            new SimboloMoneda(data.simbolo)
+            new SimboloMoneda(data.simbolo),
+            new CodigoIsoMoneda(data?.codigoIso)
         )
     }
 

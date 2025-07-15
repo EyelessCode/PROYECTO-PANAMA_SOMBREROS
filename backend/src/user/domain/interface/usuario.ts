@@ -39,4 +39,15 @@ export class ClaseUsuario{
             rol:this.rol
         };
     }
+
+    static fromPrimitives(data: any): ClaseUsuario {
+        return new ClaseUsuario(
+            new IdUsuario(data.id),
+            new CedulaUsuario(data.cedula),
+            new NombreUsuario(data.nombre),
+            new CorreoUsuario(data.correo),
+            new ContraseniaUsuario(data.contrasenia),
+            data.rol as RolUsuario
+        )
+    }
 }

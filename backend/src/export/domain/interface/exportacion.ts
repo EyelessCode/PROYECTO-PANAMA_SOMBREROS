@@ -1,8 +1,8 @@
-import { IdContenedor } from "../validation/contenedor/idContenedor"
+import { IdContenedor } from "../validation/idContenedor"
 import { EstadoExportacion } from "../validation/estadoExportacion"
 import { IdExportacion } from "../validation/idExportacion"
 import { Moneda } from "../validation/moneda/moneda"
-import { Pais } from "../validation/pais/pais"
+import { Pais } from '../validation/pais/pais';
 import { ValorFleteExportacion } from "../validation/valorFleteExportacion"
 
 export class ClaseExportacion{
@@ -11,7 +11,7 @@ export class ClaseExportacion{
     pais:Pais
     moneda:Moneda
     fechaSalida:Date
-    fechaLlegada:Date
+    fechaLlegada?:Date
     valorFlete:ValorFleteExportacion
     estado:EstadoExportacion
     fechaRegistro:Date
@@ -22,10 +22,9 @@ export class ClaseExportacion{
         pais:Pais,
         moneda:Moneda,
         fechaSalida:Date,
-        fechaLlegada:Date,
-        fechaRegistro:Date,
         valorFlete:ValorFleteExportacion,
-        estado:EstadoExportacion=EstadoExportacion.PENDIENTE
+        estado:EstadoExportacion=EstadoExportacion.PENDIENTE,
+        fechaLlegada?:Date
     ) {
         this.id=id
         this.idContenedor=idContenedor
@@ -35,7 +34,7 @@ export class ClaseExportacion{
         this.fechaLlegada=fechaLlegada
         this.valorFlete=valorFlete
         this.estado=estado
-        this.fechaRegistro=fechaRegistro
+        this.fechaRegistro=new Date()
     }
 
     public toPrimitives() {
@@ -45,10 +44,24 @@ export class ClaseExportacion{
             Pais:this.pais.id,
             moneda:this.moneda.id,
             fechaSalida:this.fechaSalida,
-            fechaLlegada:this.fechaLlegada,
+            fechaLlegada:this.fechaLlegada??null,
             valorFlete:this.valorFlete.valorFlete,
             estado:this.estado,
             fechaRegistro:this.fechaRegistro
         };
+    }
+
+    static fromPrimitives(data: any): ClaseExportacion {
+        return new ClaseExportacion(
+            new IdExportacion(data.id),
+            new IdContenedor(data.id),
+            new Pais(data.Pais.id,data.Pais.nombre,data.Pais.codigoIso),
+            new Moneda(data.Moneda.id,data.Moneda.nombre,data.
+                Moneda.simbolo,data?.Moneda.codigoIso),
+            new Date(data.fechaSalida),
+            new ValorFleteExportacion(data.valorFlete),
+            data.estado as EstadoExportacion,
+            data.fechaLlegada?new Date(data.fechaLlegada):undefined,
+        )
     }
 }

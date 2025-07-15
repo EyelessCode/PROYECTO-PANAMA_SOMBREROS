@@ -12,7 +12,7 @@ export class ClaseProducto{
     color:Color
     precioUnitario:PrecioUnitarioSombrero
     descripcion?:DescripcionSombrero
-    fechaCreacion?:Date
+    fechaCreacion:Date
     activo:boolean
 
     constructor(id:IdSombrero,tipo:Tipo,
@@ -38,9 +38,21 @@ export class ClaseProducto{
             talla: this.talla.id,
             color: this.color.id,
             precioUnitario: this.precioUnitario.precioUnitario,
-            descripcion: this.descripcion?.descripcion || null,
+            descripcion: this.descripcion?.descripcion??null,
             fechaCreacion: this.fechaCreacion,
             activo: this.activo
         };
+    }
+
+    static fromPrimitives(data: any): ClaseProducto {
+        return new ClaseProducto(
+            new IdSombrero(data.id),
+            new Tipo(data.Tipo.id,data.Tipo.nombre),
+            new Talla(data.Talla.id,data.Talla.tipo),
+            new Color(data.Color.id,data.Color.color),
+            new PrecioUnitarioSombrero(data.precioUnitario),
+            data.descripcion?new DescripcionSombrero(data?.descripcion):undefined,
+            Boolean(data.estado),
+        )
     }
 }

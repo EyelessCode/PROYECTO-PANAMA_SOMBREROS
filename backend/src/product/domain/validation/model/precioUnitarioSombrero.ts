@@ -7,7 +7,7 @@ export class PrecioUnitarioSombrero{
     }
 
     private numNegativo(){
-        if (this.precioUnitario<0) {
+        if (this.precioUnitario<=0) {
             throw new Error(`El ID no puede ser menor a '0'!`)
         }
     }

@@ -14,7 +14,7 @@ export class TipoTalla{
     }
 
     private caracteresLimite(){
-        if (this.talla.length>=10) {
+        if (this.talla.length>10) {
             throw new Error(`La cantidad de caracteres sobrepasaron `+
                 `un límite. No lo excedas!`)
         }
