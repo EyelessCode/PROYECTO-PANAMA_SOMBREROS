@@ -3,10 +3,11 @@ import { ServicioEditarContenedor } from "../modules/container/app/service/edita
 import { ServicioEliminarContenedor } from "../modules/container/app/service/eliminarContenedor.service"
 import { ServicioObtenerContenedores } from "../modules/container/app/service/obtenerContenedores.service"
 import { ServicioObtenerUnContenedor } from "../modules/container/app/service/obtenerUnContenedor.service"
-import { RepositorioEnMemoriaContenedor } from "../modules/container/infrastructure/repository/test/contenedorRepositorioMemoria"
+import { RepositorioPostgreSqlContenedor } from "../modules/container/infrastructure/repository/postgresql/repositorioContenedorPg"
+import { RepositorioEnMemoriaContenedor } from "../modules/container/infrastructure/test/contenedorRepositorioMemoria"
 
-// const repo=new RepositoryPostgresStudent(`postgresql://eyelesscode:cris03022@localhost:5432/student_temp`)
-const repo=new RepositorioEnMemoriaContenedor()
+const repo=new RepositorioPostgreSqlContenedor(`${process.env.DATABASE_URL}`)
+// const repo=new RepositorioEnMemoriaContenedor()
 
 const contenedorServicios={
     contenedor:{

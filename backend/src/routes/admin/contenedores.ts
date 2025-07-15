@@ -10,11 +10,10 @@ rutaAdmin.get("/",(req:Request,res:Response)=>{
         "public","view","admin","contenedores.html"))
 })
 
-rutaAdmin.get("/",controlador.getAll)
-rutaAdmin.get("/:id",controlador.getOneById)
-rutaAdmin.post("/",controlador.create)
-rutaAdmin.put("/:id",controlador.edit)
-rutaAdmin.delete("/:id",controlador.delete)
-
+rutaAdmin.get("/api",controlador.getAll)
+rutaAdmin.get("/api/:id",controlador.getOneById)
+rutaAdmin.post("/api",controlador.create)
+rutaAdmin.put("/api/:id",controlador.edit)
+rutaAdmin.delete("/api/:id",controlador.delete)
 
 export {rutaAdmin}

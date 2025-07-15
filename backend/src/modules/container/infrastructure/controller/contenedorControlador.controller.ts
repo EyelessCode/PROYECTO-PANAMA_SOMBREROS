@@ -48,18 +48,13 @@ export class ControladorContenedor{
 
     edit=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            const {id,codigo,capacidadMax,pesoMax,descripcion}=req.body as {
-                id:number,
-                codigo:string,
-                capacidadMax:number,
-                pesoMax:number,
-                descripcion?:string
-            }
+            const id = parseInt(req.params.id)
+            const { codigo, capacidadMax, pesoMax, descripcion } = req.body
 
-            await contenedorServicios.contenedor.edit.run(id,codigo,capacidadMax,
-                pesoMax,descripcion)
+            await contenedorServicios.contenedor.edit.run(id, codigo, capacidadMax, pesoMax, descripcion)
 
-            return res.status(204).json(req.body).send()
+            return res.status(204).send()
+            // return res.status(204).json(req.body).send()
         } catch (error) {
             if(error instanceof Error){
                 res.status(404).json({

@@ -1,6 +1,6 @@
-import { ClaseContenedor } from "../../../domain/interface/container"
-import { IRepositorioContenedor } from "../../../domain/repository/contenedor.repositorio"
-import { IdContenedor } from "../../../domain/validation/idContenedor"
+import { ClaseContenedor } from "../../domain/interface/container"
+import { IRepositorioContenedor } from "../../domain/repository/contenedor.repositorio"
+import { IdContenedor } from "../../domain/validation/idContenedor"
 
 export class RepositorioEnMemoriaContenedor implements IRepositorioContenedor{
     private contenedor:ClaseContenedor[]=[]
