@@ -1,9 +1,9 @@
-import { CedulaUsuario } from "../validation/cedulaUsuario"
-import { ContraseniaUsuario } from "../validation/contraseniaUsuario"
-import { CorreoUsuario } from "../validation/correoUsuario"
-import { IdUsuario } from "../validation/idUsuario"
-import { NombreUsuario } from "../validation/nombreUsuario"
-import { RolUsuario } from "../validation/rolUsuario"
+import { CedulaUsuario } from "../validation/usuario/cedulaUsuario"
+import { ContraseniaUsuario } from "../validation/usuario/contraseniaUsuario"
+import { CorreoUsuario } from "../validation/usuario/correoUsuario"
+import { IdUsuario } from "../validation/usuario/idUsuario"
+import { NombreUsuario } from "../validation/usuario/nombreUsuario"
+import { RolUsuario } from "../validation/usuario/rolUsuario"
 
 export class ClaseUsuario{
     id:IdUsuario

@@ -4,7 +4,7 @@ import { IdExportacion } from "../validation/idExportacion"
 import { IdSombrero } from "../validation/idSombrero"
 import { PrecioVentaDetalleExport } from "../validation/precioVentaDetalleExport"
 
-export class ClassDetalleExport{
+export class ClaseDetalleExport{
     id:IdDetalleExport
     idExportacion:IdExportacion
     idSombrero:IdSombrero
@@ -35,8 +35,8 @@ export class ClassDetalleExport{
         };
     }
 
-    static fromPrimitives(data: any): ClassDetalleExport {
-        return new ClassDetalleExport(
+    static fromPrimitives(data: any): ClaseDetalleExport {
+        return new ClaseDetalleExport(
             new IdDetalleExport(data.id),
             new IdExportacion(data.id),
             new IdSombrero(data.id),

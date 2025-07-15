@@ -4,7 +4,7 @@ import { AccionHistorialExport } from "../validation/accionHistorialExport"
 import { DescripcionHistorialExport } from "../validation/descripcionHistorialExport"
 import { IdExportacion } from "../validation/idExportacion"
 
-export class ClassHistorialExport{
+export class ClaseHistorialExport{
     id:IdDetalleExport
     idExportacion:IdExportacion
     idUsuario:IdSombrero
@@ -38,8 +38,8 @@ export class ClassHistorialExport{
         };
     }
 
-    static fromPrimitives(data: any): ClassHistorialExport {
-        return new ClassHistorialExport(
+    static fromPrimitives(data: any): ClaseHistorialExport {
+        return new ClaseHistorialExport(
             new IdDetalleExport(data.id),
             new IdExportacion(data.id),
             new IdSombrero(data.id),

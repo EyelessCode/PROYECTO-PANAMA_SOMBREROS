@@ -4,7 +4,7 @@ import { DescripcionContenedor } from "../validation/descripcionContenedor"
 import { IdContenedor } from "../validation/idContenedor"
 import { PesoMaxContenedor } from "../validation/pesoMaxContenedor"
 
-export class ClassContenedor{
+export class ClaseContenedor{
     id:IdContenedor
     codigo:CodigoContenedor
     capacidadMax:CapacidadMaxContenedor
@@ -35,8 +35,8 @@ export class ClassContenedor{
         };
     }
 
-    static fromPrimitives(data: any): ClassContenedor {
-        return new ClassContenedor(
+    static fromPrimitives(data: any): ClaseContenedor {
+        return new ClaseContenedor(
             new IdContenedor(data.id),
             new CodigoContenedor(data.codigo),
             new CapacidadMaxContenedor(data.capacidadMax),
