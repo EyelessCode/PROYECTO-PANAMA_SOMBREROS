@@ -7,17 +7,17 @@
         <meta name="description"
             content="Dashboard, donde el Admin puede monitorear herramientas">
         <meta name="keywords" content="HTML, CSS, JS, POSTGRESQL">
-        <link rel="shortcut icon" href="../../static/img/icon/exportacion-icon.ico" type="image/x-icon"> <!--? Ruta Test -->
-        <link rel="stylesheet" href="../../static/css/admin/style.css"> <!--? Ruta Test -->
-        <link rel="stylesheet" href="../../static/css/admin/detalleExportacion.css"> <!--? Ruta Test -->
-        <script defer src="../../static/js/admin/detalleExpo/util.js"></script>
+        <link rel="shortcut icon" href="/img/icon/exportacion-icon.ico" type="image/x-icon"> <!--? Ruta Test -->
+        <link rel="stylesheet" href="/css/admin/style.css"> <!--? Ruta Test -->
+        <link rel="stylesheet" href="/css/admin/detalleExportacion.css"> <!--? Ruta Test -->
+        <script defer src="/js/admin/detalleExpo/util.js"></script>
         <title>Visor de Exportaciones | Administración</title>
     </head>
     <body>
         <header class="contenedorHeader">
             <div class="hero-logo">
                 <span class="imagenn">
-                    <img src="../../static/img/logo-sombrero.webp"
+                    <img src="/img/logo-sombrero.webp"
                             alt="sombrerito"> <!--? Ruta Test -->
                 </span>
                 <h2 id="h2Titulo">Detalles de Exportaciones</h2>
@@ -25,7 +25,7 @@
 
             <div class="content-user">
                 <div class="barra-user">
-                    <img src="../../static/img/perfil-logo.webp" alt="perfil">
+                    <img src="/img/perfil-logo.webp" alt="perfil">
                     <!-- <p>FernándezFernándezFernández 15</p> -->
                     <!--* lo de arriba es dinámico -->
                     <!--* Dinámico -->
@@ -34,7 +34,7 @@
                 <div class="log-out">
                     <!--? Ruta Test -->
                     <button onclick="window.location.replace('./login.html')">
-                        <img src="../../static/img/log-out-icon.webp" alt="cerrar sesión">
+                        <img src="/img/log-out-icon.webp" alt="cerrar sesión">
                     </button>
                 </div>
             </div>
@@ -47,11 +47,11 @@
 
             <div class="menu-opciones">
                 <ul class="contenedor-list">
-                    <li><a href="./home.html">Inicio</a></li> <!--? ruta testt-->
-                    <li><a href="./productos.html">Gestión Productos</a></li>
-                    <li><a href="./clientes.html">Gestión Clientes</a></li>
-                    <li><a href="./contenedores.html">Contenedores</a></li>
-                    <li><a href="./consultas.html">Consultas Admin</a></li>
+                    <li><a href="http://localhost:1000/sombreroPanama/admin/dashboard">Inicio</a></li> <!--? ruta testt-->
+                    <li><a href="http://localhost:1000/sombreroPanama/admin/productos">Gestión Productos</a></li>
+                    <li><a href="http://localhost:1000/sombreroPanama/admin/clientes">Gestión Clientes</a></li>
+                    <li><a href="http://localhost:1000/sombreroPanama/admin/contenedores">Contenedores</a></li>
+                    <li><a href="http://localhost:1000/sombreroPanama/admin/consultas">Consultas Admin</a></li>
                     <li><a href="#">Detalles Exportación</a></li>
                 </ul>
             </div>
@@ -60,7 +60,7 @@
         <main class="contenedorDashboard tabla-detalleExpo">
             <div class="boton-add-accion">
                 <!--? ruta testt-->
-                <button type="button" onclick="window.location.href='./form/formulario.html?type=addConsulta'">Nueva consulta +</button>
+                <button type="button" onclick="window.location.href='http://localhost:1000/sombreroPanama/admin/formulario?type=addConsulta'">Nueva consulta +</button>
             </div>
             <div class="tabla">
                 <table class="contenedor-tabla">
@@ -83,7 +83,7 @@
                             <td>
                                 <button type="button" class="btnAccion btnShow">
                                     <span>
-                                        <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
+                                        <img src="/img/icon/show-icon.webp" alt="mostrar">
                                     </span>
                                 </button>
                             </td>
@@ -92,7 +92,7 @@
                         <!--! lo que se debe poner -->
                         <!-- <button type="button" class="btnAccion btnShow">
                             <span>
-                                <img src="../../static/img/icon/show-icon.webp" alt="mostrar">
+                                <img src="/img/icon/show-icon.webp" alt="mostrar">
                             </span>
                         </button> -->
                     <!--? 7 filas con header -->
@@ -101,11 +101,11 @@
 
             <div class="nextOrBack">
                 <button type="button" class="btnBack"><span>
-                    <img src="../../static/img/next-or-back.webp" alt="back">
+                    <img src="/img/next-or-back.webp" alt="back">
                 </span></button>
                 <span class="page">1</span> <!--? Dinaamico-->
                 <button type="button" class="btnNext"><span>
-                    <img src="../../static/img/next-or-back.webp" alt="next">
+                    <img src="/img/next-or-back.webp" alt="next">
                 </span></button>
             </div>
         </main>
@@ -151,7 +151,7 @@
 
         <footer>
             <div class="logo">
-                <img src="../../static/img/logo-sombrero.webp" alt="logo">
+                <img src="/img/logo-sombrero.webp" alt="logo">
                 <p>&copy; <span>Panamá Sombreros</span></p>
             </div>
 

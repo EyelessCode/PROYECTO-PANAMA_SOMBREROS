@@ -7,16 +7,16 @@
         <meta name="description"
             content="Dashboard, donde el Admin puede monitorear herramientas">
         <meta name="keywords" content="HTML, CSS, JS, POSTGRESQL">
-        <link rel="shortcut icon" href="../../static/img/icon/producto-icon.ico" type="image/x-icon"> <!--? Ruta Test -->
-        <link rel="stylesheet" href="../../static/css/admin/style.css"> <!--? Ruta Test -->
-        <link rel="stylesheet" href="../../static/css/admin/producto.css"> <!--? Ruta Test -->
+        <link rel="shortcut icon" href="/img/icon/producto-icon.ico" type="image/x-icon"> <!--? Ruta Test -->
+        <link rel="stylesheet" href="/css/admin/style.css"> <!--? Ruta Test -->
+        <link rel="stylesheet" href="/css/admin/producto.css"> <!--? Ruta Test -->
         <title>Gestión Productos | Administración</title>
     </head>
     <body>
         <header class="contenedorHeader">
             <div class="hero-logo">
                 <span class="imagenn">
-                    <img src="../../static/img/logo-sombrero.webp"
+                    <img src="/img/logo-sombrero.webp"
                             alt="sombrerito"> <!--? Ruta Test -->
                 </span>
                 <h2 id="h2Titulo">Gestión Productos</h2>
@@ -24,7 +24,7 @@
 
             <div class="content-user">
                 <div class="barra-user">
-                    <img src="../../static/img/perfil-logo.webp" alt="perfil">
+                    <img src="/img/perfil-logo.webp" alt="perfil">
                     <!-- <p>FernándezFernándezFernández 15</p> -->
                     <!--* lo de arriba es dinámico -->
                     <!--* Dinámico -->
@@ -32,8 +32,8 @@
     
                 <div class="log-out">
                     <!--? Ruta Test -->
-                    <button onclick="window.location.replace('./login.html')">
-                        <img src="../../static/img/log-out-icon.webp" alt="cerrar sesión">
+                    <button onclick="window.location.replace('http://localhost:1000/sombreroPanama/admin/login')">
+                        <img src="/img/log-out-icon.webp" alt="cerrar sesión">
                     </button>
                 </div>
             </div>
@@ -46,12 +46,12 @@
 
             <div class="menu-opciones">
                 <ul class="contenedor-list">
-                    <li><a href="./home.html">Inicio</a></li> <!--? ruta testt-->
+                    <li><a href="http://localhost:1000/sombreroPanama/admin/dashboard">Inicio</a></li> <!--? ruta testt-->
                     <li><a href="#">Gestión Productos</a></li>
-                    <li><a href="./clientes.html">Gestión Clientes</a></li>
-                    <li><a href="./contenedores.html">Contenedores</a></li>
-                    <li><a href="./consultas.html">Consultas Admin</a></li>
-                    <li><a href="./detalleExportaciones.html">Detalles Exportación</a></li>
+                    <li><a href="http://localhost:1000/sombreroPanama/admin/clientes">Gestión Clientes</a></li>
+                    <li><a href="http://localhost:1000/sombreroPanama/admin/contenedores">Contenedores</a></li>
+                    <li><a href="http://localhost:1000/sombreroPanama/admin/consultas">Consultas Admin</a></li>
+                    <li><a href="http://localhost:1000/sombreroPanama/admin/detalleExportaciones">Detalles Exportación</a></li>
                 </ul>
             </div>
         </aside>
@@ -59,7 +59,7 @@
         <main class="contenedorDashboard tabla-producto">
             <div class="boton-add-accion">
                 <!--? ruta testt-->
-                <button id="btnFormProducto" type="button" onclick="window.location.href='./form/formulario.html?type=addProducto'">Agregar nuevo</button>
+                <button id="btnFormProducto" type="button" onclick="window.location.href='http://localhost:1000/sombreroPanama/admin/formulario?type=addProducto'">Agregar nuevo</button>
             </div>
             <div class="tabla">
                 <table class="contenedor-tabla">
@@ -84,12 +84,12 @@
                             <td>
                                 <button type="button" class="btnAccion btnDelete">
                                     <span>
-                                        <img src="../../static/img/icon/delete-icon.webp" alt="borrar">
+                                        <img src="/img/icon/delete-icon.webp" alt="borrar">
                                     </span>
                                 </button>
-                                <button type="button" class="btnAccion btnEdit" onclick="window.location.href='./form/formulario.html?type=editProducto'">
+                                <button type="button" class="btnAccion btnEdit" onclick="window.location.href='http://localhost:1000/sombreroPanama/admin/formulario?type=editProducto'">
                                     <span>
-                                        <img src="../../static/img/icon/edit-icon.webp" alt="editar">
+                                        <img src="/img/icon/edit-icon.webp" alt="editar">
                                     </span>
                                 </button>
                             </td>
@@ -99,30 +99,30 @@
                     <!--! esto debe ir ya sabes -->
                     <!-- <button type="button" class="btnAccion btnDelete">
                         <span>
-                            <img src="../../static/img/icon/delete-icon.webp" alt="borrar">
+                            <img src="/img/icon/delete-icon.webp" alt="borrar">
                         </span>
                     </button> -->
-                    <!-- <button type="button" class="btnAccion btnEdit" onclick="window.location.href='./form/formulario.html?type=editProducto'">
+                    <!-- <button type="button" class="btnAccion btnEdit" onclick="window.location.href='http://localhost:1000/sombreroPanama/admin/formulario?type=editProducto'">
                         <span>
-                            <img src="../../static/img/icon/edit-icon.webp" alt="editar">
+                            <img src="/img/icon/edit-icon.webp" alt="editar">
                         </span>
                     </button> -->
                 </table>
             </div>
             <div class="nextOrBack">
                 <button type="button" class="btnBack"><span>
-                    <img src="../../static/img/next-or-back.webp" alt="back">
+                    <img src="/img/next-or-back.webp" alt="back">
                 </span></button>
                 <span class="page">1</span> <!--? Dinaamico-->
                 <button type="button" class="btnNext"><span>
-                    <img src="../../static/img/next-or-back.webp" alt="next">
+                    <img src="/img/next-or-back.webp" alt="next">
                 </span></button>
             </div>
         </main>
 
         <footer>
             <div class="logo">
-                <img src="../../static/img/logo-sombrero.webp" alt="logo">
+                <img src="/img/logo-sombrero.webp" alt="logo">
                 <p>&copy; <span>Panamá Sombreros</span></p>
             </div>
 
