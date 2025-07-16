@@ -15,17 +15,18 @@ export class ServicioCrearProducto{
         tipoId:number,
         tallaId:number,
         colorId:number,
-        precio:number,
-        descripcion?:string
+        precioUnitario:number,
+        activo:boolean,
+        descripcion?:string,
     ):Promise<void>{
         const producto=new ClaseProducto(
             new IdSombrero(id),
             new IdTipo(tipoId),
             new IdTalla(tallaId),
             new IdColor(colorId),
-            new PrecioUnitarioSombrero(precio),
+            new PrecioUnitarioSombrero(precioUnitario),
             descripcion?new DescripcionSombrero(descripcion):undefined,
-            true
+            Boolean(activo)
         )
 
         return this.repo.create(producto)

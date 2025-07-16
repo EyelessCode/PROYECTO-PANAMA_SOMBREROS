@@ -30,7 +30,7 @@ export class RepositorioPosgreSqlExportacion implements IRepositorioExportacion{
             new Date(data.fecha_salida),
             new ValorFleteExportacion(data.valor_flete),
             new EstadoExportacion(data.estado),
-            data.fecha_llegada_estimada?new Date(data.fecha_llegada_estimada):undefined
+            new Date(data.fecha_registro)
         )
     }
 
@@ -72,13 +72,13 @@ export class RepositorioPosgreSqlExportacion implements IRepositorioExportacion{
                 $6,$7,$8)`,
             values:[
                 exportacion.idContenedor.id,
-                exportacion.pais.id,
-                exportacion.moneda.id,
+                exportacion.idPais.id,
+                exportacion.idMoneda.id,
                 exportacion.fechaSalida,
-                exportacion.fechaLlegada??null,
+                exportacion?.fechaLlegada??null,
                 exportacion.valorFlete.valorFlete,
                 exportacion.estado.estado,
-                exportacion.fechaRegistro
+                exportacion.fechaRegistro.getDate()
             ]
         }
 
@@ -89,17 +89,17 @@ export class RepositorioPosgreSqlExportacion implements IRepositorioExportacion{
         const query={
             text:`UPDATE exportacion SET id_contenedor=$1,
                 id_pais_destino=$2,id_moneda=$3,fecha_salida=$4,fecha_llegada_estimada=$5,
-                valor_flete=$6,estado=$7,fecha_registro=8 `+
+                valor_flete=$6,estado=$7,fecha_registro=$8 `+
                 `WHERE id_exportacion=$9`,
             values:[
                 exportacion.idContenedor.id,
-                exportacion.pais.id,
-                exportacion.moneda.id,
+                exportacion.idPais.id,
+                exportacion.idMoneda.id,
                 exportacion.fechaSalida,
-                exportacion.fechaLlegada??null,
+                exportacion?.fechaLlegada??null,
                 exportacion.valorFlete.valorFlete,
                 exportacion.estado.estado,
-                exportacion.fechaRegistro,
+                exportacion.fechaRegistro.getDate(),
                 exportacion.id.id
             ]
         }

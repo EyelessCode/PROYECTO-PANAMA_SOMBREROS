@@ -13,8 +13,8 @@ export class ServicioEditarExportacion{
     async run(
         id:number,
         idContenedor:number,
-        pais:number,
-        moneda:number,
+        idPais:number,
+        idMoneda:number,
         fechaSalida:Date|string,
         valorFlete:number,
         estado:string,
@@ -29,8 +29,8 @@ export class ServicioEditarExportacion{
         const exportacion=new ClaseExportacion(
             new IdExportacion(id),
             new IdContenedor(idContenedor),
-            new IdPais(pais),
-            new IdMoneda(moneda),
+            new IdPais(idPais),
+            new IdMoneda(idMoneda),
             new Date(fechaSalida),
             new ValorFleteExportacion(valorFlete),
             new EstadoExportacion(estado),

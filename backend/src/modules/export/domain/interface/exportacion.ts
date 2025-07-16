@@ -8,8 +8,8 @@ import { EstadoExportacion } from "../validation/estadoExportacion";
 export class ClaseExportacion{
     id:IdExportacion
     idContenedor:IdContenedor
-    pais:IdPais
-    moneda:IdMoneda
+    idPais:IdPais
+    idMoneda:IdMoneda
     fechaSalida:Date
     fechaLlegada?:Date
     valorFlete:ValorFleteExportacion
@@ -19,8 +19,8 @@ export class ClaseExportacion{
     constructor(
         id:IdExportacion,
         idContenedor:IdContenedor,
-        pais:IdPais,
-        moneda:IdMoneda,
+        idPais:IdPais,
+        idMoneda:IdMoneda,
         fechaSalida:Date,
         valorFlete:ValorFleteExportacion,
         estado:EstadoExportacion,
@@ -28,8 +28,8 @@ export class ClaseExportacion{
     ) {
         this.id=id
         this.idContenedor=idContenedor
-        this.pais=pais
-        this.moneda=moneda
+        this.idPais=idPais
+        this.idMoneda=idMoneda
         this.fechaSalida=fechaSalida
         this.fechaLlegada=fechaLlegada
         this.valorFlete=valorFlete
@@ -41,8 +41,8 @@ export class ClaseExportacion{
         return {
             id:this.id.id,
             idContenedor:this.idContenedor.id,
-            pais:this.pais.id,
-            moneda:this.moneda.id,
+            idPais:this.idPais.id,
+            idMoneda:this.idMoneda.id,
             fechaSalida:this.fechaSalida,
             fechaLlegada:this.fechaLlegada??null,
             valorFlete:this.valorFlete.valorFlete,
@@ -60,7 +60,7 @@ export class ClaseExportacion{
             new Date(data.fechaSalida),
             new ValorFleteExportacion(data.valorFlete),
             new EstadoExportacion(data.estado),
-            data.fechaLlegada?new Date(data.fechaLlegada):undefined
+            new Date(data.fechaRegistro)
         )
     }
 }

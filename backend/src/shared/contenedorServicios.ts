@@ -16,10 +16,17 @@ import { ServicioEliminarExportacion } from "../modules/export/app/service/elimi
 import { ServicioObtenerExportaciones } from "../modules/export/app/service/obtenerExportaciones.service"
 import { ServicioObtenerUnaExportacion } from "../modules/export/app/service/obtenerUnaExportacion.service"
 import { RepositorioPosgreSqlExportacion } from "../modules/export/infrastructure/repository/posgresql/exportacionRepositorio"
+import { ServicioObtenerProductos } from '../modules/product/app/service/obtenerProductos.service';
+import { RepositorioPosgreSqlProducto } from '../modules/product/infrastructure/repository/postgresql/productoRepositorio';
+import { ServicioObtenerUnProducto } from '../modules/product/app/service/obtenerUnProducto.service';
+import { ServicioCrearProducto } from "../modules/product/app/service/crearProducto.service"
+import { ServicioEditarProducto } from "../modules/product/app/service/editarProducto.service"
+import { ServicioEliminarProducto } from "../modules/product/app/service/eliminarProducto.service"
 
 const repoContenedor=new RepositorioPostgreSqlContenedor(`${process.env.DATABASE_URL}`)
 const repoDetalleExport=new RepositorioPostgreSqlDetallesExport(`${process.env.DATABASE_URL}`)
 const repoExportacion=new RepositorioPosgreSqlExportacion(`${process.env.DATABASE_URL}`)
+const repoProducto=new RepositorioPosgreSqlProducto(`${process.env.DATABASE_URL}`)
 // const repo=new RepositorioEnMemoriaContenedor()
 
 const contenedorServicios={
@@ -43,6 +50,13 @@ const contenedorServicios={
         create:new ServicioCrearExportacion(repoExportacion),
         edit:new ServicioEditarExportacion(repoExportacion),
         delete:new ServicioEliminarExportacion(repoExportacion)
+    },
+    producto:{
+        getAll:new ServicioObtenerProductos(repoProducto),
+        getOneById:new ServicioObtenerUnProducto(repoProducto),
+        create:new ServicioCrearProducto(repoProducto),
+        edit:new ServicioEditarProducto(repoProducto),
+        delete:new ServicioEliminarProducto(repoProducto)
     }
 }
 

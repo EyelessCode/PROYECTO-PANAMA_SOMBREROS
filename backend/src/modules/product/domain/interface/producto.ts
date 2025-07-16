@@ -7,24 +7,24 @@ import { IdColor } from "../validation/model/idColor"
 
 export class ClaseProducto{
     id:IdSombrero
-    tipo:IdTipo
-    talla:IdTalla
-    color:IdColor
+    idTipo:IdTipo
+    idTalla:IdTalla
+    idColor:IdColor
     precioUnitario:PrecioUnitarioSombrero
     descripcion?:DescripcionSombrero
     fechaCreacion:Date
     activo:boolean
 
-    constructor(id:IdSombrero,tipo:IdTipo,
-        talla:IdTalla,color:IdColor,
+    constructor(id:IdSombrero,idTipo:IdTipo,
+        idTalla:IdTalla,idColor:IdColor,
         precioUnitario:PrecioUnitarioSombrero,
         descripcion?:DescripcionSombrero,
         activo:boolean=true
     ) {
         this.id=id
-        this.tipo=tipo
-        this.talla=talla
-        this.color=color
+        this.idTipo=idTipo
+        this.idTalla=idTalla
+        this.idColor=idColor
         this.precioUnitario=precioUnitario
         this.descripcion=descripcion
         this.fechaCreacion=new Date()
@@ -34,9 +34,9 @@ export class ClaseProducto{
     public toPrimitives() {
         return {
             id: this.id.id,
-            tipo: this.tipo.id,
-            talla: this.talla.id,
-            color: this.color.id,
+            idTipo: this.idTipo.id,
+            idTalla: this.idTalla.id,
+            idColor: this.idColor.id,
             precioUnitario: this.precioUnitario.precioUnitario,
             descripcion: this.descripcion?.descripcion??null,
             fechaCreacion: this.fechaCreacion,

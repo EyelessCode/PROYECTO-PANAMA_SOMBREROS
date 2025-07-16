@@ -1,10 +1,10 @@
 import { NextFunction, Request, Response } from "express";
 import { contenedorServicios } from "../../../../shared/contenedorServicios"
 
-export class ControladorExportacion{
+export class ControladorProducto{
     getAll=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            const expor=await contenedorServicios.exportacion.getAll.run()
+            const expor=await contenedorServicios.producto.getAll.run()
             console.log(expor.map((c)=>c.toPrimitives()));
             return res.json(expor.map((c)=>c.toPrimitives())).status(200)
         } catch (error) {
@@ -14,7 +14,7 @@ export class ControladorExportacion{
 
     getOneById=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            const expor=await contenedorServicios.exportacion.getOneById.run(Number(req.params.id))
+            const expor=await contenedorServicios.producto.getOneById.run(Number(req.params.id))
             return res.json(expor.toPrimitives()).status(200)
         } catch (error) {
             if (error instanceof Error) {
@@ -29,22 +29,22 @@ export class ControladorExportacion{
 
     create=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            const {id,idContenedor,idPais,idMoneda,fechaSalida,
-                valorFlete,estado,fechaLlegada
+            const {id,tipoId,tallaId,colorId,precioUnitario,
+                descripcion,activo
             }=req.body as {
-                id:number
-                idContenedor:number
-                idPais:number
-                idMoneda:number
-                fechaSalida:Date
-                valorFlete:number
-                estado:string
-                fechaLlegada?:Date|string
+                id:number,
+                tipoId:number,
+                tallaId:number,
+                colorId:number,
+                precioUnitario:number,
+                descripcion?:string,
+                activo:boolean
             }
 
-            await contenedorServicios.exportacion.create.run(id,idContenedor,
-                idPais,idMoneda,fechaSalida,
-            valorFlete,estado,fechaLlegada)
+            await contenedorServicios.producto.create.run(id,tipoId,
+                tallaId,colorId,precioUnitario,
+                activo,descripcion,
+            )
 
             return res.status(201).json(req.body).send()
         } catch (error) {
@@ -55,13 +55,14 @@ export class ControladorExportacion{
     edit=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
             const id = parseInt(req.params.id)
-            const { idContenedor,
-                idPais,idMoneda,fechaSalida,fechaLlegada,
-            valorFlete,estado } = req.body
+            const { tipoId,
+                tallaId,colorId,precioUnitario,activo,
+            descripcion,fechaCreacion } = req.body
 
-            await contenedorServicios.exportacion.edit.run(id, idContenedor,
-                idPais,idMoneda,fechaSalida,fechaLlegada,
-            valorFlete,estado)
+            await contenedorServicios.producto.edit.run(id, tipoId,
+                tallaId,colorId,precioUnitario,
+                activo,descripcion
+            )
 
             return res.status(204).send()
             // return res.status(204).json(req.body).send()
@@ -78,7 +79,7 @@ export class ControladorExportacion{
 
     delete=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            await contenedorServicios.exportacion.delete.run(Number(req.params.id))
+            await contenedorServicios.producto.delete.run(Number(req.params.id))
             
             return res.status(204).send()
         } catch (error) {

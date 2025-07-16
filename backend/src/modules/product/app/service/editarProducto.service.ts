@@ -15,7 +15,8 @@ export class ServicioEditarProducto{
         tipoId:number,
         tallaId:number,
         colorId:number,
-        precio:number,
+        precioUnitario:number,
+        activo:boolean,
         descripcion?:string
     ):Promise<void>{
         const producto=new ClaseProducto(
@@ -23,9 +24,9 @@ export class ServicioEditarProducto{
             new IdTipo(tipoId),
             new IdTalla(tallaId),
             new IdColor(colorId),
-            new PrecioUnitarioSombrero(precio),
+            new PrecioUnitarioSombrero(precioUnitario),
             descripcion?new DescripcionSombrero(descripcion):undefined,
-            true
+            Boolean(activo)
         )
 
         const existe=await this.repo.getOneById(producto.id)
