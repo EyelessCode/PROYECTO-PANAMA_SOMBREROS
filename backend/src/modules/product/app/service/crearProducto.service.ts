@@ -12,18 +12,18 @@ export class ServicioCrearProducto{
 
     async run(
         id:number,
-        tipoId:number,
-        tallaId:number,
-        colorId:number,
+        idTipo:number,
+        idTalla:number,
+        idColor:number,
         precioUnitario:number,
         activo:boolean,
         descripcion?:string,
     ):Promise<void>{
         const producto=new ClaseProducto(
             new IdSombrero(id),
-            new IdTipo(tipoId),
-            new IdTalla(tallaId),
-            new IdColor(colorId),
+            new IdTipo(idTipo),
+            new IdTalla(idTalla),
+            new IdColor(idColor),
             new PrecioUnitarioSombrero(precioUnitario),
             descripcion?new DescripcionSombrero(descripcion):undefined,
             Boolean(activo)

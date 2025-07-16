@@ -1,12 +1,12 @@
 import { NextFunction, Request, Response } from "express";
-import { contenedorServicios } from "../../../../shared/contenedorServicios"
+import { contenedorMySqlServicios } from "../../../../shared/contenedorServicios";
 
-export class ControladorProducto{
+export class ControladorContenedorMySql{
     getAll=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            const expor=await contenedorServicios.producto.getAll.run()
-            console.log(expor.map((c)=>c.toPrimitives()));
-            return res.json(expor.map((c)=>c.toPrimitives())).status(200)
+            const contenedor=await contenedorMySqlServicios.contenedor.getAll.run()
+            console.log(contenedor.map((c)=>c.toPrimitives()));
+            return res.json(contenedor.map((c)=>c.toPrimitives())).status(200)
         } catch (error) {
             next(error)
         }
@@ -14,8 +14,8 @@ export class ControladorProducto{
 
     getOneById=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            const expor=await contenedorServicios.producto.getOneById.run(Number(req.params.id))
-            return res.json(expor.toPrimitives()).status(200)
+            const contenedor=await contenedorMySqlServicios.contenedor.getOneById.run(Number(req.params.id))
+            return res.json(contenedor.toPrimitives()).status(200)
         } catch (error) {
             if (error instanceof Error) {
                 return res.status(404).json({
@@ -29,22 +29,16 @@ export class ControladorProducto{
 
     create=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            const {id,idTipo,idTalla,idColor,precioUnitario,
-                descripcion,activo
-            }=req.body as {
+            const {id,codigo,capacidadMax,pesoMax,descripcion}=req.body as {
                 id:number,
-                idTipo:number,
-                idTalla:number,
-                idColor:number,
-                precioUnitario:number,
-                descripcion?:string,
-                activo:boolean
+                codigo:string,
+                capacidadMax:number,
+                pesoMax:number,
+                descripcion?:string
             }
 
-            await contenedorServicios.producto.create.run(id,idTipo,
-                idTalla,idColor,precioUnitario,
-                activo,descripcion,
-            )
+            await contenedorMySqlServicios.contenedor.create.run(id,codigo,
+                capacidadMax,pesoMax,descripcion)
 
             return res.status(201).json(req.body).send()
         } catch (error) {
@@ -55,14 +49,9 @@ export class ControladorProducto{
     edit=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
             const id = parseInt(req.params.id)
-            const { idTipo,
-                idTalla,idColor,precioUnitario,activo,
-            descripcion,fechaCreacion } = req.body
+            const { codigo, capacidadMax, pesoMax, descripcion } = req.body
 
-            await contenedorServicios.producto.edit.run(id, idTipo,
-                idTalla,idColor,precioUnitario,
-                activo,descripcion
-            )
+            await contenedorMySqlServicios.contenedor.edit.run(id, codigo, capacidadMax, pesoMax, descripcion)
 
             return res.status(204).send()
             // return res.status(204).json(req.body).send()
@@ -79,7 +68,7 @@ export class ControladorProducto{
 
     delete=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            await contenedorServicios.producto.delete.run(Number(req.params.id))
+            await contenedorMySqlServicios.contenedor.delete.run(Number(req.params.id))
             
             return res.status(204).send()
         } catch (error) {

@@ -1,23 +1,23 @@
 import { IdConsultaAdmin } from "../validation/consultaAdmin/idConsultaAdmin"
+import { IdUsuario } from "../validation/consultaAdmin/idUsuario"
 import { ResultadoConsultaAdmin } from "../validation/consultaAdmin/resultadoConsultaAdmin"
 import { TipoConsultaAdmin } from "../validation/consultaAdmin/tipoConsultaAdmin"
-import { IdUsuario } from "../validation/user/idUsuario"
 
 export class ClaseConsultaAdmin{
     id:IdConsultaAdmin
-    idUsuario:IdUsuario
+    idAdmin:IdUsuario
     fechaConsulta:Date
     tipoConsulta:TipoConsultaAdmin
     resultado?:ResultadoConsultaAdmin
 
     constructor(
         id:IdConsultaAdmin,
-        idUsuario:IdUsuario,
+        idAdmin:IdUsuario,
         tipoConsulta:TipoConsultaAdmin,
         resultado?:ResultadoConsultaAdmin
     ) {
         this.id=id
-        this.idUsuario=idUsuario
+        this.idAdmin=idAdmin
         this.fechaConsulta=new Date()
         this.tipoConsulta=tipoConsulta
         this.resultado=resultado
@@ -26,7 +26,7 @@ export class ClaseConsultaAdmin{
     public toPrimitives() {
         return {
             id:this.id.id,
-            idUsuario:this.idUsuario.id,
+            idAdmin:this.idAdmin.id,
             fechaConsulta:this.fechaConsulta,
             tipoConsulta:this.tipoConsulta.tipoConsulta,
             resultado:this.resultado?.resultado

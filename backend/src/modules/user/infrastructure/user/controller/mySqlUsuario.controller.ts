@@ -1,10 +1,10 @@
 import { NextFunction, Request, Response } from "express";
-import { contenedorServicios } from "../../../../shared/contenedorServicios"
+import { contenedorMySqlServicios } from "../../../../../shared/contenedorServicios";
 
-export class ControladorProducto{
+export class ControladorUsuarioMySql{
     getAll=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            const expor=await contenedorServicios.producto.getAll.run()
+            const expor=await contenedorMySqlServicios.usuario.getAll.run()
             console.log(expor.map((c)=>c.toPrimitives()));
             return res.json(expor.map((c)=>c.toPrimitives())).status(200)
         } catch (error) {
@@ -14,7 +14,7 @@ export class ControladorProducto{
 
     getOneById=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            const expor=await contenedorServicios.producto.getOneById.run(Number(req.params.id))
+            const expor=await contenedorMySqlServicios.usuario.getOneById.run(Number(req.params.id))
             return res.json(expor.toPrimitives()).status(200)
         } catch (error) {
             if (error instanceof Error) {
@@ -29,21 +29,20 @@ export class ControladorProducto{
 
     create=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            const {id,idTipo,idTalla,idColor,precioUnitario,
-                descripcion,activo
+            const {id,cedula,nombre,correo,contrasenia,
+                rol,
             }=req.body as {
                 id:number,
-                idTipo:number,
-                idTalla:number,
-                idColor:number,
-                precioUnitario:number,
-                descripcion?:string,
-                activo:boolean
+                cedula:string,
+                nombre:string,
+                correo:string,
+                contrasenia:string,
+                rol:string
             }
 
-            await contenedorServicios.producto.create.run(id,idTipo,
-                idTalla,idColor,precioUnitario,
-                activo,descripcion,
+            await contenedorMySqlServicios.usuario.create.run(id,cedula,
+                nombre,correo,contrasenia,
+                rol,
             )
 
             return res.status(201).json(req.body).send()
@@ -55,13 +54,11 @@ export class ControladorProducto{
     edit=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
             const id = parseInt(req.params.id)
-            const { idTipo,
-                idTalla,idColor,precioUnitario,activo,
-            descripcion,fechaCreacion } = req.body
+            const { cedula,
+                nombre,correo,contrasenia,rol } = req.body
 
-            await contenedorServicios.producto.edit.run(id, idTipo,
-                idTalla,idColor,precioUnitario,
-                activo,descripcion
+            await contenedorMySqlServicios.usuario.edit.run(id, cedula,
+                nombre,correo,contrasenia,rol
             )
 
             return res.status(204).send()
@@ -79,7 +76,7 @@ export class ControladorProducto{
 
     delete=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
-            await contenedorServicios.producto.delete.run(Number(req.params.id))
+            await contenedorMySqlServicios.usuario.delete.run(Number(req.params.id))
             
             return res.status(204).send()
         } catch (error) {

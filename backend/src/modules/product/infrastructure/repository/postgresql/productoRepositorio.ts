@@ -41,7 +41,7 @@ export class RepositorioPosgreSqlProducto implements IRepositorioProducto{
     
     async getAll(): Promise<ClaseProducto[]> {
         const query={
-            text:`SELECT * FROM producto`
+            text:`SELECT * FROM sombrero`
         }
 
         const resultado=await this.entidadPg.query<pgProducto>(query)
@@ -50,7 +50,7 @@ export class RepositorioPosgreSqlProducto implements IRepositorioProducto{
 
     async getOneById(id: IdSombrero): Promise<ClaseProducto | null> {
         const query={
-            text:`SELECT * FROM producto WHERE id_sombrero=$1`,
+            text:`SELECT * FROM sombrero WHERE id_sombrero=$1`,
             values:[id.id]
         }
 
@@ -64,12 +64,11 @@ export class RepositorioPosgreSqlProducto implements IRepositorioProducto{
 
     async create(producto: ClaseProducto): Promise<void> {
         const query={
-            text:`INSERT INTO producto (id_contenedor,
-                id_pais_destino,id_moneda,fecha_salida,fecha_llegada_estimada,
-                valor_flete,estado,fecha_registro) VALUES($1,$2,$3,$4,$5,
-                $6,$7,$8)`,
+            text:`INSERT INTO sombrero (id_tipo,
+                id_talla,id_color,precio_unitario,descripcion,
+                fecha_creacion,activo) VALUES($1,$2,$3,$4,$5,
+                $6,$7)`,
             values:[
-                // producto.id.id,
                 producto.idTipo.id,
                 producto.idTalla.id,
                 producto.idColor.id,
@@ -85,7 +84,7 @@ export class RepositorioPosgreSqlProducto implements IRepositorioProducto{
 
     async edit(producto: ClaseProducto): Promise<void> {
         const query={
-            text:`UPDATE producto SET id_tipo=$1,
+            text:`UPDATE sombrero SET id_tipo=$1,
                 id_talla=$2,id_color=$3,precio_unitario=$4,descripcion=$5,
                 fecha_creacion=$6,activo=$7 `+
                 `WHERE id_sombrero=$8`,
@@ -106,7 +105,7 @@ export class RepositorioPosgreSqlProducto implements IRepositorioProducto{
     
     async delete(id: IdSombrero): Promise<void> {
         const query={
-            text:`DELETE FROM producto WHERE id_sombrero=$1`,
+            text:`DELETE FROM sombrero WHERE id_sombrero=$1`,
             values:[id.id]
         }
 
