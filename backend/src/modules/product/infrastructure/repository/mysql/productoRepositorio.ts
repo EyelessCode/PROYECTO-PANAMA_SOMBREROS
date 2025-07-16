@@ -53,16 +53,30 @@ export class RepositorioMySqlProducto implements IRepositorioProducto {
         );
     }
 
-    async getAll(): Promise<ClaseProducto[]> {
-        let connection: PoolConnection | null = null;
-        try {
-            connection = await this.pool.getConnection();
-            const [rows] = await connection.query<MySqlProducto[]>("SELECT * FROM sombrero");
-            return rows.map((row) => this.mapeoDominio(row));
-        } finally {
-            if (connection) connection.release();
-        }
+async getAll(): Promise<any[]> {
+    let connection: PoolConnection | null = null;
+    try {
+        connection = await this.pool.getConnection();
+        const [rows] = await connection.query<any>(`
+            SELECT 
+                s.id_sombrero,
+                ts.nombre_tipo AS tipo,
+                t.valor_talla AS talla,
+                c.nombre_color AS color,
+                s.precio_unitario,
+                s.descripcion,
+                s.fecha_creacion,
+                s.activo
+            FROM sombrero s
+            JOIN tipo_sombrero ts ON s.id_tipo = ts.id_tipo_sombrero
+            JOIN talla t ON s.id_talla = t.id_talla
+            JOIN color c ON s.id_color = c.id_color;
+        `);
+        return rows;
+    } finally {
+        if (connection) connection.release();
     }
+}
 
     async getOneById(id: IdSombrero): Promise<ClaseProducto | null> {
         let connection: PoolConnection | null = null;

@@ -58,10 +58,6 @@
         </aside>
 
         <main class="contenedorDashboard tabla-detalleExpo">
-            <div class="boton-add-accion">
-                <!--? ruta testt-->
-                <button type="button" onclick="window.location.href='http://localhost:1000/sombreroPanama/admin/formulario?type=addConsulta'">Nueva consulta +</button>
-            </div>
             <div class="tabla">
                 <table class="contenedor-tabla">
                     <thead>
@@ -110,43 +106,8 @@
             </div>
         </main>
 
-        <div id="popup" class="popup-detalle-detalleExpo" display="none">
-            <!--*  popoupdinámico -->
-            <div class="contenedor-popup">
-                <h2>Visualizador a detalle</h2>
-                <div class="part fechaRegistro">
-                    <!--*  diámico -->
-                    <span id="fecha_registro">---</span>
-                </div>
+        <div id="popup" class="popup-detalle-detalleExpo">
 
-                <div class="part info">
-                    <label for="lbIdContenedor">ID Contenedor: </label>
-                    <!--*  diámico -->
-                    <span id="id_contenedor">---</span>
-                </div>
-
-                <div class="part paisDestino">
-                    <label for="lbPaisDestino">País destino: </label>
-                    <!--*  diámico -->
-                    <p id="pais_destino">Desde <span id="pais_desde">---</span> Hasta <span id="pais_hasta">---</span></p>
-                </div>
-                
-                <div class="part moneda">
-                    <label for="lbMoneda">Moneda a usar: </label>
-                    <!--*  diámico -->
-                    <span id="moneda_usar">---</span>
-                    
-                    <label for="lbFlete">Valor flete: </label>
-                    <!--*  diámico -->
-                    <span id="valor_flete">---</span>
-                </div>
-                
-                <div class="part plazoTiempo">
-                    <label for="lb">Fecha: </label>
-                    <!--*  diámico -->
-                    <p id="plazo_tiempo">Salida <span id="plazo_salida">---</span> Llegada <span id="pais_llegada">---</span></p>
-                </div>
-            </div>
         </div>
 
         <footer>

@@ -76,6 +76,22 @@ export class RepositorioMySqlUsuario implements IRepositorioUsuario {
         }
     }
 
+    async getOneByCedula(cedula: string): Promise<ClaseUsuario | null> {
+        let connection: PoolConnection | null = null;
+        try {
+            connection = await this.pool.getConnection();
+            const [rows] = await connection.query<MySqlUsuario[]>(
+                "SELECT * FROM usuario WHERE cedula = ?",
+                [cedula]
+            );
+            if (rows.length === 0) return null;
+            return this.mapeoDominio(rows[0]);
+        } finally {
+            if (connection) connection.release();
+        }
+    }
+
+
     async create(usuario: ClaseUsuario): Promise<void> {
         let connection: PoolConnection | null = null;
         try {

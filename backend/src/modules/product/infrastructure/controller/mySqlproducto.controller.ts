@@ -5,8 +5,7 @@ export class ControladorProductoMySql{
     getAll=async (req:Request,res:Response,next:NextFunction):Promise<any>=>{
         try {
             const expor=await contenedorMySqlServicios.producto.getAll.run()
-            console.log(expor.map((c)=>c.toPrimitives()));
-            return res.json(expor.map((c)=>c.toPrimitives())).status(200)
+            return res.status(200).json(expor)
         } catch (error) {
             next(error)
         }

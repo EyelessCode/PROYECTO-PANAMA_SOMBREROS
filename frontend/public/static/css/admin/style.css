@@ -342,12 +342,15 @@ footer div{
     grid-row: span 3/span 3;
     background-color: rgb(211, 211, 156);
     box-shadow: 6px 8px black;
+    overflow-y: scroll;
 }
 
 .tabla .contenedor-tabla{
     width: 100%;
     border-collapse: collapse;
     text-align: center;
+    overflow-y: scroll;
+    overflow: hidden;
 }
 
 .contenedor-tabla thead tr th{

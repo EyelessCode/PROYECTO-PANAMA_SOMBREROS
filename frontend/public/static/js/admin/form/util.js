@@ -1,6 +1,6 @@
+
 const urlParams=new URLSearchParams(window.location.search)
 const tipo=urlParams.get('type')
-
 
 if (tipo==='addProducto') {
     document.getElementById('h2Titulo').innerHTML=`Agregar un nuevo Producto`
@@ -12,13 +12,19 @@ if (tipo==='addProducto') {
                 }
             </style>
             <h3>Formulario</h3>
-            <form action="/producto" method="post">
+            <form method="post" id='formProducto'>
                 <div class="contenedor-form-generico">
                     <div class="part tipoSombrero">
-                        <label for="txtTipoSomb">Tipo de Sombrero: </label>
-                        <input type="text" name="tipoSombrero" id="txtTipoSomb"
-                            placeholder="Tipo..." maxlength="25"
-                            required>
+                        <label for="cmbTipo">Tipo de Sombrero: </label>
+                        <select name="color" id="cmbTipo">
+                            <!--? dinámico -->
+                            <option selected value="0"> -- | -- </option>
+                            <option value="1">Panamá Clásico</option>
+                            <option value="2">Montecristi Fino</option>
+                            <option value="3">Brisa de Verano</option>
+                            <option value="4 Claro">Estilo Fedora</option>
+                            <option value="5 Oscuro">Sombrero Pintao</option>
+                        </select>
                     </div>
 
                     <div class="part talla">
@@ -26,6 +32,11 @@ if (tipo==='addProducto') {
                         <select name="talla" id="cmbTalla">
                             <!--? dinámico -->
                             <option selected value="0"> -- Seleccionar -- </option>
+                            <option value="1">S</option>
+                            <option value="2">M</option>
+                            <option value="3">L</option>
+                            <option value="4">ML</option>
+                            <option value="5">XXL</option>
                         </select>
                     </div>
 
@@ -34,6 +45,13 @@ if (tipo==='addProducto') {
                         <select name="color" id="cmbColor">
                             <!--? dinámico -->
                             <option selected value="0"> -- | -- </option>
+                            <option value="1">Natural</option>
+                            <option value="2">Blanco</option>
+                            <option value="3">Negro</option>
+                            <option value="4">Marrón Claro</option>
+                            <option value="5">Marrón Oscuro</option>
+                            <option value="6">Beige</option>
+                            <option value="7">Personalizado</option>
                         </select>
                         <div class="ejemploColor"></div>
                     </div>
@@ -41,7 +59,7 @@ if (tipo==='addProducto') {
                     <div class="part precio">
                         <label for="txtPrecio">Precio: </label>
                         <input type="text" name="precio" id="txtPrecio"
-                            placeholder="Precio..." required>
+                            placeholder="Precio..." required step="0.01">
                     </div>
 
                     <div class="part boton">
@@ -54,6 +72,13 @@ if (tipo==='addProducto') {
             </form>
         `
 }else if(tipo==='editProducto'){
+    // const respuesta = await fetch(`http://localhost:1000/sombreroPanama/admin/productos/api/${id}`,{
+    //     method: 'PUT',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(pacienteData)
+    // });
+    // const soli=respuesta.json()
+    // console.log(soli);
     document.getElementById('h2Titulo').innerHTML=`Modificar un Producto`
     document.getElementById('wrapperFormulario').innerHTML=
         `
@@ -67,13 +92,19 @@ if (tipo==='addProducto') {
                 }
             </style>
             <h3>Formulario</h3>
-            <form action="/producto" method="post">
+            <form method="post" id='formProducto'>
                 <div class="contenedor-form-generico">
                     <div class="part tipoSombrero">
-                        <label for="txtTipoSomb">Tipo de Sombrero: </label>
-                        <input type="text" name="tipoSombrero" id="txtTipoSomb"
-                            placeholder="Tipo..." maxlength="25"
-                            required>
+                        <label for="cmbTipo">Tipo de Sombrero: </label>
+                        <select name="color" id="cmbTipo">
+                            <!--? dinámico -->
+                            <option selected value="0"> -- Seleccionar -- </option>
+                            <option value="1">Panamá Clásico</option>
+                            <option value="2">Montecristi Fino</option>
+                            <option value="3">Brisa de Verano</option>
+                            <option value="4 Claro">Estilo Fedora</option>
+                            <option value="5 Oscuro">Sombrero Pintao</option>
+                        </select>
                     </div>
 
                     <div class="part talla">
@@ -81,6 +112,11 @@ if (tipo==='addProducto') {
                         <select name="talla" id="cmbTalla">
                             <!--? dinámico -->
                             <option selected value="0"> -- Seleccionar -- </option>
+                            <option value="1">S</option>
+                            <option value="2">M</option>
+                            <option value="3">L</option>
+                            <option value="4">ML</option>
+                            <option value="5">XXL</option>
                         </select>
                     </div>
 
@@ -89,6 +125,13 @@ if (tipo==='addProducto') {
                         <select name="color" id="cmbColor">
                             <!--? dinámico -->
                             <option selected value="0"> -- | -- </option>
+                            <option value="1">Natural</option>
+                            <option value="2">Blanco</option>
+                            <option value="3">Negro</option>
+                            <option value="4">Marrón Claro</option>
+                            <option value="5">Marrón Oscuro</option>
+                            <option value="6">Beige</option>
+                            <option value="7">Personalizado</option>
                         </select>
                         <div class="ejemploColor"></div>
                     </div>
@@ -113,18 +156,18 @@ if (tipo==='addProducto') {
     document.getElementById('wrapperFormulario').innerHTML=
         `
             <h3>Consulta</h3>
-            <form action="/consulta" method="post">
+            <form method="post" id='formConsulta'>
                 <div class="contenedor-form-generico">
                     <div class="part info">
                         <label for="lbCedula">Cédula: </label>
                         <!--*  diámico -->
-                        <span id="cedula_usuario"></span>
+                        <span id="cedula_usuario">XXXXXX</span>
                     </div>
 
                     <div class="part nombre">
                         <label for="lbNombre">Nombre: </label>
                         <!--*  diámico -->
-                        <span id="nombre_usuario"></span>
+                        <span id="nombre_usuario">XXXXXXXXXXXXXXX</span>
                     </div>
 
                     <div class="part categoria">
@@ -132,6 +175,9 @@ if (tipo==='addProducto') {
                         <select name="categoria" id="cmbCategoria">
                             <!--? dinámico -->
                             <option selected value="0"> -- Seleccionar -- </option>
+                            <option value="REPORTE_VENTAS">REPORTE_VENTAS</option>
+                            <option value="BUSQUEDA_CLIENTES">BUSQUEDA_CLIENTES</option>
+                            <option value="INVENTARIO">INVENTARIO</option>
                         </select>
                         <button id="btnAddCategoria" type="button">+</button>
                     </div>
