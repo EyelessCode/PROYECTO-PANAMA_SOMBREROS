@@ -5,7 +5,7 @@ import { ContraseniaUsuario } from "../../../domain/validation/user/contraseniaU
 import { CorreoUsuario } from "../../../domain/validation/user/correoUsuario"
 import { IdUsuario } from "../../../domain/validation/user/idUsuario"
 import { NombreUsuario } from "../../../domain/validation/user/nombreUsuario"
-import { validarRol } from "../../../domain/validation/user/rolUsuario"
+import { RolUsuario } from "../../../domain/validation/user/rolUsuario"
 
 
 export class ServicioCrearUsuario{
@@ -25,7 +25,7 @@ export class ServicioCrearUsuario{
             new NombreUsuario(nombre),
             new CorreoUsuario(correo),
             new ContraseniaUsuario(contrasenia),
-            validarRol(rol)
+            new RolUsuario(rol)
         )
 
         return this.repo.create(usuario)

@@ -1,6 +1,6 @@
 import { ClaseExportacion } from "../../domain/interface/exportacion"
 import { IRepositorioExportacion } from "../../domain/repository/exportacion.repositorio"
-import { validarEstado } from "../../domain/validation/estadoExportacion"
+import { EstadoExportacion } from "../../domain/validation/estadoExportacion"
 import { IdContenedor } from "../../domain/validation/idContenedor"
 import { IdExportacion } from "../../domain/validation/idExportacion"
 import { IdMoneda } from "../../domain/validation/idMoneda"
@@ -20,11 +20,11 @@ export class ServicioCrearExportacion{
         estado:string,
         fechaLlegada?:Date|string
     ):Promise<void>{
-        const fecha = typeof fechaSalida === 'string' ? new Date(fechaSalida):fechaSalida;
+        // const fecha = typeof fechaSalida === 'string' ? new Date(fechaSalida):fechaSalida;
 
-        if (isNaN(fecha.getTime())) {
-            throw new Error("Fecha de consulta inválida");
-        }
+        // if (isNaN(fecha.getTime())) {
+        //     throw new Error("Fecha de consulta inválida");
+        // }
         
         const exportacion=new ClaseExportacion(
             new IdExportacion(id),
@@ -33,7 +33,7 @@ export class ServicioCrearExportacion{
             new IdMoneda(moneda),
             new Date(fechaSalida),
             new ValorFleteExportacion(valorFlete),
-            validarEstado(estado),
+            new EstadoExportacion(estado),
             fechaLlegada?new Date(fechaLlegada):undefined,
         )
 

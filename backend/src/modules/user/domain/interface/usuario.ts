@@ -19,7 +19,7 @@ export class ClaseUsuario{
         nombre:NombreUsuario,
         correo:CorreoUsuario,
         contrasenia:ContraseniaUsuario,
-        rol:RolUsuario=RolUsuario.USUARIO
+        rol:RolUsuario
     ) {
         this.id=id
         this.cedula=cedula
@@ -36,7 +36,7 @@ export class ClaseUsuario{
             nombre:this.nombre.nombre,
             correo:this.correo.correo,
             contrasenia:this.contrasenia.contrasenia,
-            rol:this.rol
+            rol:this.rol.rol
         };
     }
 
@@ -47,7 +47,7 @@ export class ClaseUsuario{
             new NombreUsuario(data.nombre),
             new CorreoUsuario(data.correo),
             new ContraseniaUsuario(data.contrasenia),
-            data.rol as RolUsuario
+            new RolUsuario(data.rol)
         )
     }
 }

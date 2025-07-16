@@ -1,11 +1,29 @@
-export enum RolUsuario{
-    USUARIO="usuario",
-    ADMINISTRACION="administrador"
-}
+export class RolUsuario{
+    rol:string
 
-export function validarRol(rol: string): RolUsuario {
-    if (Object.values(RolUsuario).includes(rol as RolUsuario)) {
-        return rol as RolUsuario;
+    constructor(rol:string) {
+        this.rol=rol
+        this.validacion()
+        this.caracteresLimite()
     }
-    throw new Error(`Rol inválido. Valores permitidos: ${Object.values(RolUsuario).join(", ")}`)
+
+    private validacion(){
+        const rolValidos = ['usuario', 'administrador']
+
+        if (!rolValidos.includes(this.rol)) {
+            this.rol = 'usuario'
+        }
+
+    }
+
+    private caracteresLimite(){
+        if (this.rol.length>=20) {
+            throw new Error(`La cantidad de caracteres sobrepasaron `+
+                `un límite. No lo excedas!`)
+        }
+    }
+
+    get rolValor():string{
+        return this.rol
+    }
 }

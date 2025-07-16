@@ -1,9 +1,9 @@
 import { IdContenedor } from "../validation/idContenedor"
-import { EstadoExportacion } from "../validation/estadoExportacion"
 import { IdExportacion } from "../validation/idExportacion"
 import { ValorFleteExportacion } from "../validation/valorFleteExportacion"
 import { IdPais } from "../validation/idPais";
 import { IdMoneda } from "../validation/idMoneda";
+import { EstadoExportacion } from "../validation/estadoExportacion";
 
 export class ClaseExportacion{
     id:IdExportacion
@@ -23,7 +23,7 @@ export class ClaseExportacion{
         moneda:IdMoneda,
         fechaSalida:Date,
         valorFlete:ValorFleteExportacion,
-        estado:EstadoExportacion=EstadoExportacion.PENDIENTE,
+        estado:EstadoExportacion,
         fechaLlegada?:Date
     ) {
         this.id=id
@@ -46,7 +46,7 @@ export class ClaseExportacion{
             fechaSalida:this.fechaSalida,
             fechaLlegada:this.fechaLlegada??null,
             valorFlete:this.valorFlete.valorFlete,
-            estado:this.estado,
+            estado:this.estado.estado,
             fechaRegistro:this.fechaRegistro
         };
     }
@@ -59,7 +59,7 @@ export class ClaseExportacion{
             new IdMoneda(data.id),
             new Date(data.fechaSalida),
             new ValorFleteExportacion(data.valorFlete),
-            data.estado as EstadoExportacion,
+            new EstadoExportacion(data.estado),
             data.fechaLlegada?new Date(data.fechaLlegada):undefined
         )
     }

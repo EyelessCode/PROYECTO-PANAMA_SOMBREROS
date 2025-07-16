@@ -1,6 +1,6 @@
 import { ClaseExportacion } from "../../domain/interface/exportacion"
 import { IRepositorioExportacion } from "../../domain/repository/exportacion.repositorio"
-import { validarEstado } from "../../domain/validation/estadoExportacion"
+import { EstadoExportacion } from "../../domain/validation/estadoExportacion"
 import { IdContenedor } from "../../domain/validation/idContenedor"
 import { IdExportacion } from "../../domain/validation/idExportacion"
 import { IdMoneda } from "../../domain/validation/idMoneda"
@@ -33,7 +33,7 @@ export class ServicioEditarExportacion{
             new IdMoneda(moneda),
             new Date(fechaSalida),
             new ValorFleteExportacion(valorFlete),
-            validarEstado(estado),
+            new EstadoExportacion(estado),
             fechaLlegada?new Date(fechaLlegada):undefined,
         )
 

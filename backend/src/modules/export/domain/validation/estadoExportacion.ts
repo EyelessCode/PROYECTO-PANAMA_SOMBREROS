@@ -1,13 +1,29 @@
-export enum EstadoExportacion{
-    PENDIENTE="pendiente",
-    EN_TRANSITO="en_transito",
-    ENTREGADO="entregado",
-    CANCELADO="cancelado"
-}
+export class EstadoExportacion{
+    estado:string
 
-export function validarEstado(estado: string): EstadoExportacion {
-    if (Object.values(EstadoExportacion).includes(estado as EstadoExportacion)) {
-        return estado as EstadoExportacion;
+    constructor(estado:string) {
+        this.estado=estado
+        this.validacion()
+        this.caracteresLimite()
     }
-    throw new Error(`Estado inválido. Valores permitidos: ${Object.values(EstadoExportacion).join(", ")}`)
+
+    private validacion(){
+        const estadosValidos = ['pendiente', 'en_transito', 'entregado', 'cancelado'];
+
+        if (!estadosValidos.includes(this.estado)) {
+            this.estado = 'pendiente';
+        }
+
+    }
+
+    private caracteresLimite(){
+        if (this.estado.length>=20) {
+            throw new Error(`La cantidad de caracteres sobrepasaron `+
+                `un límite. No lo excedas!`)
+        }
+    }
+
+    get estadoValor():string{
+        return this.estado
+    }
 }
