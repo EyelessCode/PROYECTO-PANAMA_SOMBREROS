@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
             precioUnitario: parseFloat(document.getElementById("txtPrecio").value)
         };
 
-
-
         try {
             const respuesta = await fetch("http://localhost:1000/sombreroPanama/admin/productos/api", {
                 method: "POST",
